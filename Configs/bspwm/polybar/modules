@@ -1,0 +1,366 @@
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = true
+reverse-scroll = false
+enable-scroll = true
+ws-icon-0 = I;%{F#b03bc0}%{A3:alacritty &:}󰎤%{A}%{F-}
+ws-icon-1 = II;%{F#00c0ff}%{A3:chromium &:}󰎧%{A}%{F-}
+ws-icon-2 = III;%{F#2944f2}%{A3:bspwmfloat.sh alacritty -e nvim ~/.config/bspwm/bspwmrc &:}󰎪%{A}%{F-}
+
+ws-icon-3 = IV;%{F#c46a4b}%{A3:zathura &:}󰎭%{A}%{F-}
+ws-icon-4 = V;%{F#ff004b}%{A3:bspwmfloat.sh alacritty -e nvim &:}󰎱%{A}%{F-}
+ws-icon-5 = VI;%{F#ffca00}%{A3:start-newsboat.sh &:}󰎳%{A}%{F-}
+ws-icon-6 = VII;%{F#ff93aa}%{A3:gimp &:}󰎶%{A}%{F-}
+ws-icon-7 = VIII;%{F#FF8C00}%{A3:retroarch &:}󰎹%{A}%{F-}
+ws-icon-8 = IX;%{F#d448ff}%{A3:discord &:}󰎼%{A}%{F-}
+ws-icon-default =%{F#9e43ba}%{A3:<!!>:}󰎿%{A}%{F-}
+format = "<label-state>" 
+
+label-focused ="{%{A1:bspc node -f next.local.!floating:}%{A2:xdo close:}%icon%%{A}%{A}} "
+label-focused-padding = 0
+
+label-occupied ="%icon% "
+label-occupied-padding = 0
+
+label-urgent ="%icon%%{F#ff004b}%{T3}%{O-12}󰀨 %{T-}%{F-}"
+label-foreground= ${colors.FOREGROUND}
+label-background = ${colors.BACKGROUND}
+label-urgent-padding = 0
+
+label-empty =
+label-empty-padding = 0
+
+[module/power-menu]
+type = custom/script
+exec = echo "󰊠"
+click-left = sh ~/.config/bspwm/rofi/powermenu.sh
+
+[module/menu]
+type = custom/script
+exec = echo "󰛡"
+click-left = ~/.config/rofi/launchers/type-6/launcher.sh
+click-right = toggle_eww
+
+
+
+[module/wlan]
+type = internal/network
+interface = wlp2s0
+interval = 3.0
+label-connected = %essid% %netspeed%
+
+label-disconnected = 󰤭
+label-disconnected-foreground = #6c809e
+
+ramp-signal-0 = %{F#ff104b}󰤫%{F-}
+ramp-signal-1 = %{F#ffd200}󰤟%{F-}
+ramp-signal-2 = 󰤢
+ramp-signal-3 = 󰤥
+ramp-signal-4 = 󰤨
+ramp-signal-foreground = ${colors.GREEN}
+ramp-signal-background = ${colors.BACKGROUND}
+format-connected = %{A:bspwmfloat.sh alacritty -e nmtui:}%{T2}<ramp-signal><label-connected>%{T-}%{A}
+format-connected-background = ${colors.BACKGROUND}
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = AC
+full-at = 99
+
+;format-charging = %{T3}<label-charging>%{T-}<animation-charging> 
+
+;format-discharging = %{T3}<label-discharging>%{T-}<ramp-capacity>
+
+format-full = %{T3}%{T-}󰂄
+format-full-foreground = ${colors.BLUE}
+
+animation-charging-0 = 󱊤
+animation-charging-1 = 󱊥
+animation-charging-2 = 󱊦
+animation-charging-foreground = ${colors.GREEN}
+animation-charging-framerate = 900
+
+ramp-capacity-0 = %{F#ff004b}󰂃%{F-}
+ramp-capacity-1 = %{F#ff5300}󰁺%{F-}
+ramp-capacity-2 = %{F#ff8000}󰁻%{F-}
+ramp-capacity-3 = %{F#ffd200}󰁼%{F-}
+ramp-capacity-4 = 󰁽
+ramp-capacity-5 = 󰁾
+ramp-capacity-6 = 󰁿
+ramp-capacity-7 = 󰂀
+ramp-capacity-8 = 󰂁
+ramp-capacity-9 = 󰂂
+ramp-capacity-10 = 󰁹 
+ramp-capacity-foreground = ${colors.YELLOW}
+ramp-capacity-framerate = 750
+format-charging = %{A:bspwmfloat.sh alacritty --title 'battery' -e btop:}%{T2}<animation-charging>%{T-}%{A} <label-charging>
+
+format-discharging = %{A:bspwmfloat.sh alacritty --title 'battery' -e btop:}%{T2}<ramp-capacity>%{T-}%{A} <label-discharging>
+format-background = ${colors.BACKGROUND}
+
+
+
+
+
+
+[module/date]
+type = internal/date
+interval = 1
+date-alt = "%d-%m-%Y"
+date = "%d-%m"
+time = "%H:%M:%S "
+label = %time% %date%
+format = %{A3:toggle_cal:}<label>%{A}
+format-prefix = ""
+format-prefix-font = 0  
+format-prefix-foreground = ${colors.FOREGROUND}
+format-prefix-background = ${colors.BACKGROUND}
+label-background = ${colors.BACKGROUND}
+label-foreground = #ED005F
+
+
+
+
+
+
+[module/audio]
+type = internal/pulseaudio
+
+format-volume = <label-volume><bar-volume>
+format-background = ${colors.BACKGROUND}
+label-volume = "󰕾 "
+label-volume-foreground = ${colors.BLUE}
+
+
+label-muted = 󰖁 
+label-muted-foreground = ${colors.RED}
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.ALTYELLOW}
+bar-volume-foreground-1 = ${colors.ALTGREEN}
+bar-volume-foreground-2 = ${colors.YELLOW}
+bar-volume-foreground-3 = ${colors.GREEN}
+bar-volume-gradient = true
+bar-volume-indicator = "%{T3}󰣠%{T-}"
+bar-volume-indicator-font = 2
+bar-volume-fill = 
+bar-volume-fill-font = 1
+bar-volume-empty = 
+bar-volume-empty-font = 1
+bar-volume-empty-foreground = #FFFFFF
+
+
+[module/ranger]
+type = custom/script
+exec = echo "󰉋"
+click-left = bspwmfloat.sh alacritty -e ranger
+click-right = bspwmfull.sh alacritty -e ranger
+
+
+[module/left]
+type = custom/text
+content = %{T3}├%{T-}
+content-background = ${colors.BACKGROUND}
+content-foreground = ${colors.ALTCYAN}
+
+[module/right]
+type = custom/text
+content = %{T3}┤%{T-}
+content-background = ${colors.BACKGROUND}
+content-foreground = ${colors.ALTCYAN}
+
+[module/sep]
+type = custom/text
+content = %{T3}┼%{T-}
+content-background = ${colors.BACKGROUND}
+content-foreground = ${colors.ALTCYAN}
+
+
+
+[module/cpu]
+type = internal/cpu
+format = %{A:bspwmfloat.sh alacritty -e btop:}%{T2}<ramp-load><label>%{T-}%{A}
+format-background = ${colors.BACKGROUND}
+format-foreground = ${colors.FOREGROUND}
+format-padding = 0
+ramp-load-0 =%{F#4C4}󰍛%{F-}
+ramp-load-1 =%{F#9C4}󰍛%{F-}
+ramp-load-2 =%{F#CC4}󰍛%{F-}
+ramp-load-3 =%{F#C84}󰍛%{F-}
+ramp-load-4 =%{F#C44}󰍛%{F-}
+ramp-load-font = 2
+label = "%percentage%% "
+
+
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+;;password = mysecretpassword
+
+interval = 2
+
+;format-online = <label-song> <icon-prev> <toggle> <icon-next>
+format-online-prefix = "󰋋"
+format-online-prefix-foreground = ${colors.GREEN}
+
+format-playing = ${self.format-online}
+format-paused = <label-song> <toggle>
+
+;format-offline = <label-offline>
+format-offline-prefix = "󰋐"
+format-offline-prefix-foreground = ${colors.RED}
+label-offline = "Offline"
+
+; label-song =  "%title% | %artist%"
+label-song =  "%title% "
+label-song-font = 1
+label-song-maxlen = 20
+label-song-ellipsis = true
+
+icon-play = 󰐌
+icon-play-font = 2
+icon-play-foreground = ${colors.GREEN}
+icon-pause = 󱖐
+icon-pause-font = 2
+icon-pause-foreground = ${colors.YELLOW}
+icon-stop = 󰏥
+icon-stop-foreground = ${colors.RED}
+icon-prev = 󰁒
+icon-prev-font = 2
+icon-prev-foreground = ${colors.CYAN}
+icon-next = 󰁙
+icon-next-font = 2
+icon-next-foreground = ${colors.CYAN}
+
+format-offline = %{A:mpd 2> /dev/null:} <label-offline> %{T2}%{T-}%{A}
+
+format-online = %{A:bspwmfloat.sh alacritty --title 'Music' -e ncmpcpp:}%{T2}<label-song>%{T-}%{A}<icon-prev> <toggle> <icon-next>
+
+[module/backlight]
+type = internal/backlight
+
+card = amdgpu_bl0
+enable-scroll = true
+
+label = %percentage%
+label-foreground = ${colors.MAGENTA}
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-foreground = ${colors.FOREGROUND}
+
+format = %{T2}<ramp> <label>%{T-}
+format-background = ${colors.BACKGROUND}
+format-foreground = ${colors.GREEN}
+
+
+;;=================================================
+
+[module/used-memory]
+type = custom/script
+exec = free -m | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
+tail = true
+interval = 2
+format-prefix =󰂵
+format-prefix-foreground = ${colors.YELLOW}
+format-background = ${colors.BACKGROUND}
+label = "%output% MB"
+format = %{A:bspwmfloat.sh alacritty -e btop:} <label> %{T2}%{T-}%{A} 
+  
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+
+
+[module/title]
+type = internal/xwindow
+
+; Available tags:
+;   <label> (default)
+format = <label>
+format-prefix = " "
+format-prefix-foreground = #14fc14
+;;format-background = ${color.BG}
+;;format-foreground = ${color.AC}
+;;format-padding = 4
+
+; Available tokens:
+;   %title%
+; Default: %title%
+label = %title%
+label-maxlen = 30
+
+
+[module/polywins]
+type = custom/script
+exec = ~/.config/bspwm/polybar/polywins.sh 2>/dev/null
+format = <label>
+format-background = ${colors.BACKGROUND}
+label = %output%
+label-padding = 0
+tail = true
+
+[module/pacseek]
+type = custom/script
+exec = echo "󰆦"
+click-left = bspwmfloat.sh alacritty -e pacseek
+
+[module/taskwarrior]
+type = custom/script
+exec = ~/.config/bspwm/polybar/tasks.sh -r 15
+tail = true
+format = <label>
+label-maxlen = 20
+format-foreground = ${colors.BLUE}
+format-background = ${colors.BACKGROUND}
+label-padding = 1
+label= "%output%"
+click-right = kill -USR2 %pid%
+click-left = kill -USR1 %pid%
+
+
+[module/fsearch]
+type = custom/text
+content = "󰡦"
+content-foreground = ${colors.secondary}
+click-left = bspwmfloat.sh fsearch
+content-padding = 0
+content-font = 4
+
+
+
+[module/bluetooth]
+type = custom/script
+exec = ~/.config/bspwm/polybar/bluetooth-status.sh
+interval = 2
+click-left = bspwmfloat.sh blueberry
+click-right = exec sh ~/.config/bspwm/polybar/bluetooth-status.sh -t 
+format-padding = 1
+format-background = ${colors.BACKGROUND}
+format-foreground = ${colors.FOREGROUND}
+
+
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+
+interval = 60
+fixed-values = false
+
+format-mounted = <label-mounted>
+format-mounted-prefix = "󰑹"
+format-mounted-prefix-foreground = ${colors.BLUE}
+
+format-unmounted = <label-unmounted>
+format-unmounted-prefix = "󰑹"
+
+label-mounted = "%used%"
+label-unmounted = %mountpoint%: not mounted
+
+

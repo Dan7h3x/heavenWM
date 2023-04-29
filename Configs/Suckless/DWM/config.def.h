@@ -494,7 +494,7 @@ static const Rule rules[] = {
 	RULE(.class = "Matlab R2018b", .isfloating = 1)
 	RULE(.class = "Alacritty", .isfloating = 1)
 	RULE(.class = "python3", .isfloating = 1)
-	RULE(.class = "matplotlib", .isfloating = 1)
+	RULE(.class = "Matplotlib", .isfloating = 1)
 	RULE(.class = "Lxappearance", .isfloating = 1)
 	RULE(.class = "TelegramDesktop", .isfloating = 1)
 	#if RENAMED_SCRATCHPADS_PATCH
@@ -932,8 +932,8 @@ static const Key keys[] = {
 	{ Mod1Mask|ControlMask, 		XK_Print, 					spawn, {.v = shotarea } },
 
 	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
-	{Mod1Mask,			XK_F1,		spawn,			SHCMD("~/.config/rofi/launchers/type-6/launcher.sh")},
-	{MODKEY,			XK_x,		spawn,			SHCMD("~/.config/rofi/powermenu/type-5/powermenu.sh")},
+	{Mod1Mask,			XK_F1,		spawn,			SHCMD("~/.config/Suckless/rofi/launcher")},
+	{MODKEY,			XK_x,		spawn,			SHCMD("~/.config/Suckless/rofi/powermenu.sh")},
 	{ MODKEY,             XK_Return,     spawn,                  {.v = termcmd } },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },

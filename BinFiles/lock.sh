@@ -10,7 +10,7 @@ ring_out="#ABE9B3"
 i3lock \
     -n \
     --force-clock \
-    -i ~/.config/qtile/wallpapers/cosmos-1080.jpg \
+    -i ~/.config/Wallpaper/Yin_Yang_Koi.jpg  \
     -e \
     --indicator \
     --radius=40 \

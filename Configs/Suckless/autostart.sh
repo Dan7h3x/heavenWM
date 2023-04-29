@@ -13,8 +13,8 @@ xsetroot -cursor_name left_ptr
 xfce4-power-manager &
 
 #Apps
-picom --experimental-backends --config ~/.config/bspwm/picom.conf &
-feh --bg-fill -z ~/Pictures/Wallpaper/ &
+picom &
+feh --bg-fill -z ~/.config/Wallpaper/Sonic.jpg &
 xsetroot -cursor_name left_ptr &
 numlockx on &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

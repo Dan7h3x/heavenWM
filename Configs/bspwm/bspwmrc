@@ -55,7 +55,7 @@ eww daemon &
 xfce4-power-manager &
 ksuperkey -e 'Super_L=Alt_L|F1' &
 bspfloat &
-feh --no-fehbg --bg-fill ~/Pictures/Wallpaper/0WEBEiZ.png
+feh --no-fehbg --bg-fill ~/.config/Wallpaper/main.png
 xsetroot -cursor_name left_ptr &
 
 # ##############################################################################

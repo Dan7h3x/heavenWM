@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+echo "^c#ffe744^ ^c#ffe744^$(date '+%d/%m|%I:%M:%S')"
+

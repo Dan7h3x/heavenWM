@@ -115,7 +115,7 @@ static const int ulineall = 0;                  /* 1 to show underline on all ta
 #define NAMETAG_FORMAT "%s"
 #endif // NAMETAG_PREPEND_PATCH
 /* The maximum amount of bytes reserved for each tag text. */
-#define MAX_TAGLEN 16
+#define MAX_TAGLEN 8
 /* The command to run (via popen). This can be tailored by adding a prompt, passing other command
  * line arguments or providing name options. Optionally you can use other dmenu like alternatives
  * like rofi -dmenu. */
@@ -154,9 +154,9 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = { "JetBrainsMono Nerd Font:size=18" };
+static const char font[]                 = { "JetBrainsMono Nerd Font:size=12" };
 #else
-static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=12" };
+static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=10" };
 #endif // BAR_PANGO_PATCH
 static const char dmenufont[]            = "Iosevka Term:size=12";
 #include "themes/tokyo.h"
@@ -403,7 +403,7 @@ static const char *const autostart[] = {
 #if RENAMED_SCRATCHPADS_PATCH
 static const char *scratchpadcmd[] = {"s", "st", "-n", "spterm", NULL};
 #elif SCRATCHPADS_PATCH
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "55x20", NULL };
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "70x30", NULL };
 static Sp scratchpads[] = {
    /* name          cmd  */
    {"spterm",      spcmd1},
@@ -864,8 +864,8 @@ static const char *shotin10[]  			= { "takeshot", "--in10", NULL };
 static const char *shotwin[]  			= { "takeshot", "--win", NULL };
 static const char *shotarea[]  			= { "takeshot", "--area", NULL };
 
-
-
+static const char *alacritty[]      = {"alacritty",NULL};
+static const char *lockscreen[]      = {"lock.sh",NULL};
 
 /* commands */
 #if !NODMENU_PATCH
@@ -925,16 +925,18 @@ static const Key keys[] = {
 	{ 0, 						XF86XK_MonBrightnessDown, 	spawn, {.v = downbl   } },
 
 	// Print Keys -----------
-	{ 0, 						XK_Print, 					spawn, {.v = shotnow } },
+	{ 0, 						XK_Print, 					spawn, {.v = shotarea } },
 	{ Mod1Mask, 					XK_Print, 					spawn, {.v = shotin5 } },
 	{ ShiftMask, 				XK_Print, 					spawn, {.v = shotin10 } },
 	{ ControlMask, 				XK_Print, 					spawn, {.v = shotwin } },
-	{ Mod1Mask|ControlMask, 		XK_Print, 					spawn, {.v = shotarea } },
+	{ Mod1Mask|ControlMask, 		XK_Print, 					spawn, {.v = shotnow } },
 
 	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
-	{Mod1Mask,			XK_F1,		spawn,			SHCMD("~/.config/Suckless/rofi/launcher")},
-	{MODKEY,			XK_x,		spawn,			SHCMD("~/.config/Suckless/rofi/powermenu.sh")},
+	{Mod1Mask,			XK_F1,		spawn,			SHCMD("~/.config/rofi/launchers/type-6/launcher.sh")},
+	{MODKEY,			XK_x,		spawn,			SHCMD("~/.config/rofi/powermenu/type-5/powermenu.sh")},
 	{ MODKEY,             XK_Return,     spawn,                  {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = alacritty } },
+{ ControlMask|Mod1Mask,             XK_l,     spawn,                  {.v = lockscreen } },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
@@ -989,9 +991,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_h,          setmfact,               {.f = -0.05} },
 	{ MODKEY,                       XK_l,          setmfact,               {.f = +0.05} },
 	#if CFACTS_PATCH
-	{ MODKEY,             XK_KP_Up,          setcfact,               {.f = +0.25} },
-	{ MODKEY,             XK_KP_Down,          setcfact,               {.f = -0.25} },
-	{ MODKEY,             XK_KP_0,          setcfact,               {0} },
+	{ MODKEY,             XK_j,          setcfact,               {.f = -0.1} },
+	{ MODKEY,             XK_k,          setcfact,               {.f = +0.1} },
+	{ MODKEY,             XK_0,          setcfact,               {0} },
 	#endif // CFACTS_PATCH
 	#if ASPECTRESIZE_PATCH
 	{ MODKEY|ControlMask|ShiftMask, XK_e,          aspectresize,           {.i = +24} },
@@ -1012,7 +1014,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_k,          movestack,              {.i = -1 } },
 	#endif // MOVESTACK_PATCH
 	#if TRANSFER_PATCH
-	{ MODKEY,                       XK_x,          transfer,               {0} },
+	{ MODKEY|ShiftMask,                       XK_x,          transfer,               {0} },
 	#endif // TRANSFER_PATCH
 	#if TRANSFER_ALL_PATCH
 	{ MODKEY|ControlMask,           XK_x,          transferall,            {0} },
@@ -1067,8 +1069,8 @@ static const Key keys[] = {
 	{ MODKEY|Mod1Mask,              XK_backslash,  shiftviewclients,       { .i = +1 } },
 	#endif // SHIFTVIEW_CLIENTS_PATCH
 	#if SHIFTBOTH_PATCH
-	{ MODKEY|ControlMask,           XK_Left,       shiftboth,              { .i = -1 } }, // note keybinding conflict with focusadjacenttag tagandviewtoleft
-	{ MODKEY|ControlMask,           XK_Right,      shiftboth,              { .i = +1 } }, // note keybinding conflict with focusadjacenttag tagandviewtoright
+	{ Mod1Mask|ControlMask,           XK_Left,       shiftboth,              { .i = -1 } }, // note keybinding conflict with focusadjacenttag tagandviewtoleft
+	{ Mod1Mask|ControlMask,           XK_Right,      shiftboth,              { .i = +1 } }, // note keybinding conflict with focusadjacenttag tagandviewtoright
 	#endif // SHIFTBOTH_PATCH
 	#if SHIFTSWAPTAGS_PATCH && SWAPTAGS_PATCH
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_Left,       shiftswaptags,          { .i = -1 } },
@@ -1217,10 +1219,6 @@ static const Key keys[] = {
 	{ MODKEY|ControlMask,           XK_Down,       switchtag,              { .ui = SWITCHTAG_DOWN  | SWITCHTAG_VIEW } },
 	{ MODKEY|ControlMask,           XK_Right,      switchtag,              { .ui = SWITCHTAG_RIGHT | SWITCHTAG_VIEW } },
 	{ MODKEY|ControlMask,           XK_Left,       switchtag,              { .ui = SWITCHTAG_LEFT  | SWITCHTAG_VIEW } },
-	{ MODKEY|Mod1Mask,              XK_Up,         switchtag,              { .ui = SWITCHTAG_UP    | SWITCHTAG_TAG | SWITCHTAG_VIEW } },
-	{ MODKEY|Mod1Mask,              XK_Down,       switchtag,              { .ui = SWITCHTAG_DOWN  | SWITCHTAG_TAG | SWITCHTAG_VIEW } },
-	{ MODKEY|Mod1Mask,              XK_Right,      switchtag,              { .ui = SWITCHTAG_RIGHT | SWITCHTAG_TAG | SWITCHTAG_VIEW } },
-	{ MODKEY|Mod1Mask,              XK_Left,       switchtag,              { .ui = SWITCHTAG_LEFT  | SWITCHTAG_TAG | SWITCHTAG_VIEW } },
 	#endif // BAR_TAGGRID_PATCH
 	#if MOVEPLACE_PATCH
 	{ MODKEY,                       XK_KP_7,       moveplace,              {.ui = WIN_NW }},   /* XK_KP_Home,  */

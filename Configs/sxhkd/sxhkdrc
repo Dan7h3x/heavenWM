@@ -32,7 +32,7 @@ ctrl + alt + l
 
 # Launch Apps
 super + shift + {f,w,e}
-	{thunar,chromium,code}
+	{thunar,brave,code}
 
 ##---------- System Keys ----------##
 

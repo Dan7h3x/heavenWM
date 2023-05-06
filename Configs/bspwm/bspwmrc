@@ -94,4 +94,3 @@ bspc rule -a 'Matplotlib' state=floating &
 bspc rule -a 'Python3' state=floating &
 bspc rule -a 'Figure' state=floating &
 bspc rule -a 'MyNotes' state=floating &
-

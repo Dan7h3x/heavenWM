@@ -62,7 +62,7 @@ mainbox {
 imagebox {
     padding:                     40px;
     background-color:            transparent;
-    background-image:            url("~/.config/bspwm/rofi/Rofi.png", height);
+    background-image:            url("~/.config/Suckless/rofi/Rofi.png", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }

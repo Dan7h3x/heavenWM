@@ -11,6 +11,6 @@ yellow=#d8b170
 
  SSID=$(iwgetid -r)
 	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "\x02^c$black^^b$blue^ 󰤨 ^d^%s""^c$blue^^b$grey^ $SSID ^b$black^" ;;
-	down) printf "\x02^c$black^^b$blue^ 󰤯 ^d^%s""^c$blue^^b$grey^ Disconnected ^b$black^" ;;
+	up) printf "󰤨  %s $SSID" ;;
+	down) printf "󰤯  Off" ;;
 	esac

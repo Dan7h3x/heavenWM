@@ -38,7 +38,7 @@ click-left = sh ~/.config/bspwm/rofi/powermenu.sh
 [module/menu]
 type = custom/script
 exec = echo "󰛡"
-click-left = ~/.config/rofi/launchers/type-6/launcher.sh
+click-left = ~/.config/bspwm/rofi/launcher
 click-right = toggle_eww
 
 

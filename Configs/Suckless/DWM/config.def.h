@@ -2,12 +2,12 @@
 
 /* appearance */
 #if ROUNDED_CORNERS_PATCH
-static const unsigned int borderpx       = 3;   /* border pixel of windows */
-static const int corner_radius           = 10;
+static const unsigned int borderpx       = 1;   /* border pixel of windows */
+static const int corner_radius           = 5;
 #else
 static const unsigned int borderpx       = 1;   /* border pixel of windows */
 #endif // ROUNDED_CORNERS_PATCH
-static const unsigned int snap           = 32;  /* snap pixel */
+static const unsigned int snap           = 16;  /* snap pixel */
 #if SWALLOW_PATCH
 static const int swallowfloating         = 0;   /* 1 means swallow floating windows by default */
 #endif // SWALLOW_PATCH
@@ -57,8 +57,8 @@ static const int vertpad                 = 4;  /* vertical padding of bar */
 static const int sidepad                 = 4;  /* horizontal padding of bar */
 #endif // BAR_PADDING_PATCH
 #if BAR_WINICON_PATCH
-#define ICONSIZE 20    /* icon size */
-#define ICONSPACING 2  /* space between icon and title */
+#define ICONSIZE 24    /* icon size */
+#define ICONSPACING 1  /* space between icon and title */
 #endif // BAR_WINICON_PATCH
 #if FOCUSONCLICK_PATCH
 static const int focusonwheel            = 0;
@@ -88,7 +88,7 @@ static const int horizpadbar             = 4;   /* horizontal padding for status
 static const int vertpadbar              = 2;   /* vertical padding for statusbar */
 #endif // BAR_STATUSPADDING_PATCH
 #if BAR_STATUSBUTTON_PATCH
-static const char buttonbar[]            = "";
+static const char buttonbar[]            = "";
 #endif // BAR_STATUSBUTTON_PATCH
 #if BAR_SYSTRAY_PATCH
 static const unsigned int systrayspacing = 0;   /* systray spacing */
@@ -110,7 +110,7 @@ static const int ulineall = 0;                  /* 1 to show underline on all ta
 #if NAMETAG_PREPEND_PATCH
 /* The format in which the tag is written when named. E.g. %d: %.12s will write the tag number
  * followed the first 12 characters of the given string. You can also just use "%d: %s" here. */
-#define NAMETAG_FORMAT "%d: %.12s"
+#define NAMETAG_FORMAT "%d: %.8s"
 #else
 #define NAMETAG_FORMAT "%s"
 #endif // NAMETAG_PREPEND_PATCH
@@ -128,7 +128,7 @@ static const unsigned int tabmodkey        = 0x40; /* (Alt) when this key is hel
 static const unsigned int tabcyclekey      = 0x17; /* (Tab) when this key is hit the menu moves one position forward in client stack. Must be the same key as used to run alttabstart */
 static const unsigned int tabposy          = 1;    /* tab position on Y axis, 0 = top, 1 = center, 2 = bottom */
 static const unsigned int tabposx          = 1;    /* tab position on X axis, 0 = left, 1 = center, 2 = right */
-static const unsigned int maxwtab          = 600;  /* tab menu width */
+static const unsigned int maxwtab          = 300;  /* tab menu width */
 static const unsigned int maxhtab          = 200;  /* tab menu height */
 #endif // ALT_TAB_PATCH
 
@@ -160,46 +160,6 @@ static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=10" }
 #endif // BAR_PANGO_PATCH
 static const char dmenufont[]            = "Iosevka Term:size=12";
 #include "themes/tokyo.h"
-// static char c000000[]                    = "#bc7ad9"; // placeholder value
-//
-// static char normfgcolor[]                = "#c0caf5";
-// static char normbgcolor[]                = "#15161E";
-// static char normbordercolor[]            = "#1a1b26";
-// static char normfloatcolor[]             = "#15161E";
-//
-// static char selfgcolor[]                 = "#ffffff";
-// static char selbgcolor[]                 = "#7aa2f7";
-// static char selbordercolor[]             = "#7aa2f7";
-// static char selfloatcolor[]              = "#7aa2f7";
-//
-// static char titlenormfgcolor[]           = "#c0caf5";
-// static char titlenormbgcolor[]           = "#15161E";
-// static char titlenormbordercolor[]       = "#1a1b26";
-// static char titlenormfloatcolor[]        = "#15161E";
-//
-// static char titleselfgcolor[]            = "#9ece6a";
-// static char titleselbgcolor[]            = "#7aa2f7";
-// static char titleselbordercolor[]        = "#7aa2f7";
-// static char titleselfloatcolor[]         = "#7aa2f7";
-//
-// static char tagsnormfgcolor[]            = "#bbbbbb";
-// static char tagsnormbgcolor[]            = "#222222";
-// static char tagsnormbordercolor[]        = "#444444";
-// static char tagsnormfloatcolor[]         = "#db8fd9";
-//
-// static char tagsselfgcolor[]             = "#eeeeee";
-// static char tagsselbgcolor[]             = "#7aa2f7";
-// static char tagsselbordercolor[]         = "#7aa2f7";
-// static char tagsselfloatcolor[]          = "#7aa2f7";
-//
-// static char hidnormfgcolor[]             = "#7aa2f7";
-// static char hidselfgcolor[]              = "#227799";
-// static char hidnormbgcolor[]             = "#222222";
-// static char hidselbgcolor[]              = "#222222";
-//
-// static char urgfgcolor[]                 = "#bbbbbb";
-// static char urgbgcolor[]                 = "#222222";
-// static char urgbordercolor[]             = "#ff0000";
 // static char urgfloatcolor[]              = "#db8fd9";
 
 #if RENAMED_SCRATCHPADS_PATCH
@@ -307,7 +267,7 @@ static const unsigned int alphas[][3] = {
 #endif // BAR_ALPHA_PATCH
 #if BAR_VTCOLORS_PATCH
 static const char title_bg_dark[]   = "#303030";
-static const char title_bg_light[]  = "#fdfdfd";
+static const char title_bg_light[]  = "#a1a1a1";
 static const int color_ptrs[][ColCount] = {
 	/*                       fg      bg      border  float */
 	[SchemeNorm]         = { -1,     -1,     5,      12 },
@@ -492,6 +452,8 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 	RULE(.class = "Matlab R2018b", .isfloating = 1)
+  RULE(.class = "sun-awt-X11-XFramePeer", .isfloating = 1)
+
 	RULE(.class = "Alacritty", .isfloating = 1)
 	RULE(.class = "python3", .isfloating = 1)
 	RULE(.class = "Matplotlib", .isfloating = 1)
@@ -932,8 +894,8 @@ static const Key keys[] = {
 	{ Mod1Mask|ControlMask, 		XK_Print, 					spawn, {.v = shotnow } },
 
 	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
-	{Mod1Mask,			XK_F1,		spawn,			SHCMD("~/.config/rofi/launchers/type-6/launcher.sh")},
-	{MODKEY,			XK_x,		spawn,			SHCMD("~/.config/rofi/powermenu/type-5/powermenu.sh")},
+	{Mod1Mask,			XK_F1,		spawn,			SHCMD("~/.config/Suckless/rofi/launcher")},
+	{MODKEY,			XK_x,		spawn,			SHCMD("~/.config/Suckless/rofi/powermenu.sh")},
 	{ MODKEY,             XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = alacritty } },
 { ControlMask|Mod1Mask,             XK_l,     spawn,                  {.v = lockscreen } },

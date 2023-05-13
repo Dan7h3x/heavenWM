@@ -6,20 +6,15 @@
 #   ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║   #
 #   ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║   #
 #   ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║   #
-#   ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝   #                                    
+#   ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝   #
 ##################### By: Dan7h3x ####################
 
 
 export PATH="${PATH}:${HOME}/.config/bspwm/bin"
-
-export QT_QPA_PLATFORMTHEME="qt5ct"
-
-
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-
-
-killall -99 polybar  
+## Polybar
+killall -99 polybar
 
 if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then
     bspc monitor HDMI-A-0 -d I II III IV V VI VII IIX IX X
@@ -29,12 +24,8 @@ else
     polybar --config=~/.config/bspwm/polybar/config.ini --reload example &
 fi
 
-
-
-
-
 # ##############################################################################
-# #                                  FUNCTIONS                                 # 
+# #                                  FUNCTIONS                                 #
 # ##############################################################################
 
 # Credits to 6gk/polka
@@ -57,6 +48,7 @@ ksuperkey -e 'Super_L=Alt_L|F1' &
 bspfloat &
 feh --no-fehbg --bg-fill ~/.config/Wallpaper/main.png
 xsetroot -cursor_name left_ptr &
+setxkbmap us,ir -option 'grp:alt_shift_toggle' &
 
 # ##############################################################################
 # #                                 WINDOW RULES                               #
@@ -87,8 +79,7 @@ bspc config presel_feedback_color "#6272a4"
 #pkill borders ; borders &
 bspc config external_rules_command ''
 
-setxkbmap us,ir -option 'grp:alt_shift_toggle' &
-
+## Rules
 bspc rule -a 'MATLAB R2018b' state=floating &
 bspc rule -a 'Matplotlib' state=floating &
 bspc rule -a 'Python3' state=floating &

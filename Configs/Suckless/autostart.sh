@@ -15,8 +15,5 @@ xfce4-power-manager &
 #Apps
 picom &
 feh --bg-fill -z ~/.config/Wallpaper/Sonic.jpg &
-xsetroot -cursor_name left_ptr &
-numlockx on &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
-while type dwm >/dev/null; do dwm && continue || break; done
+setxkbmap us,ir -option 'grp:alt_shift_toggle' &

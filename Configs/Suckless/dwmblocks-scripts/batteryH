@@ -1,6 +1,6 @@
 #!/bin/bash
-bat=$(cat /sys/class/power_supply/BAT0/capacity)
-stat=$(cat /sys/class/power_supply/BAT0/status)
+bat=$(cat /sys/class/power_supply/BAT*/capacity)
+stat=$(cat /sys/class/power_supply/BAT*/status)
 if [ "$stat" == "Charging" ]
 then
   icon=""

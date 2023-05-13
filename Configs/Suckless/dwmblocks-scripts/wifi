@@ -4,13 +4,13 @@ black=#121111
 green=#8fa176
 white=#dbdfdf
 grey=#212126
-darkblue=#7d95ae
-red=#ca5a5e
+darkblue=#06038D
+red=#ff0000
 blue=#809fbe
 yellow=#d8b170
 
- SSID=$(iwgetid -r)
-	case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "󰤨  %s $SSID" ;;
-	down) printf "󰤯  Off" ;;
-	esac
+SSID=$(iwgetid -r)
+case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
+    up) printf "^c$darkblue直%s $SSID " ;;
+    down) printf "^c$red睊Off " ;;
+esac

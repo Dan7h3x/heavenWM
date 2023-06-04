@@ -15,13 +15,13 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "JetBrains Mono Nerd Font 12";
-        background:     #F1F1F1FF;
-    background-alt: #E0E0E0FF;
-    border:         #000B83FF;
-    foreground:     #252525FF;
-    selected:       #008EC4FF;
-    active:         #10A778FF;
-    urgent:         #C30771FF;
+        background:     #1E1D2F;
+    background-alt: #11111b;
+    border:         #4942E4;
+    foreground:     #D9E0EE;
+    selected:       #4942E4;
+    active:         #94e2d5;
+    urgent:         #4942E3;
 }
 
 /*

@@ -8,7 +8,10 @@ super + shift + Return
 super + t
   bspwmfull.sh alacritty -o window.startup_mode=fullscreen window.opacity=0.9 font.size=14
 alt + F1
-    sh $HOME/.config/bspwm/rofi/launcher
+    launcher
+
+super + x
+  powermenu
 
 super + d
     toggle_eww
@@ -77,8 +80,6 @@ XF86Audio{Next,Prev,Play,Stop}
 super + {_,shift + }c
 	bspc node -{c,k}
 
-super + x 
-  sh ~/.config/bspwm/rofi/powermenu.sh 
 
 # Reload Keybindings
 super + Escape

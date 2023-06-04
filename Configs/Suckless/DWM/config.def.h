@@ -18,10 +18,10 @@ static const int scalepreview            = 4;        /* Tag preview scaling */
 static int nomodbuttons                  = 1;   /* allow client mouse button bindings that have no modifier */
 #endif // NO_MOD_BUTTONS_PATCH
 #if VANITYGAPS_PATCH
-static const unsigned int gappih         = 5;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 5;  /* vert inner gap between windows */
-static const unsigned int gappoh         = 5;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 5;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappih         = 2;  /* horiz inner gap between windows */
+static const unsigned int gappiv         = 2;  /* vert inner gap between windows */
+static const unsigned int gappoh         = 2;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = 2;  /* vert outer gap between windows and screen edge */
 static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 #endif // VANITYGAPS_PATCH
 #if AUTOSTART_PATCH
@@ -54,18 +54,18 @@ static const int bar_height              = 24;   /* 0 means derive from font, >=
 #endif // BAR_HEIGHT_PATCH
 #if BAR_PADDING_PATCH
 static const int vertpad                 = 4;  /* vertical padding of bar */
-static const int sidepad                 = 4;  /* horizontal padding of bar */
+static const int sidepad                 = 2;  /* horizontal padding of bar */
 #endif // BAR_PADDING_PATCH
 #if BAR_WINICON_PATCH
 #define ICONSIZE 24    /* icon size */
-#define ICONSPACING 1  /* space between icon and title */
+#define ICONSPACING 2  /* space between icon and title */
 #endif // BAR_WINICON_PATCH
 #if FOCUSONCLICK_PATCH
 static const int focusonwheel            = 0;
 #endif // FOCUSONCLICK_PATCH
 #if FLOATPOS_PATCH
-static int floatposgrid_x                = 5;  /* float grid columns */
-static int floatposgrid_y                = 5;  /* float grid rows */
+static int floatposgrid_x                = 2;  /* float grid columns */
+static int floatposgrid_y                = 2;  /* float grid rows */
 #endif // FLOATPOS_PATCH
 #if RIODRAW_PATCH
 static const char slopspawnstyle[]       = "-t 0 -c 0.92,0.85,0.69,0.3 -o"; /* do NOT define -f (format) here */
@@ -101,7 +101,7 @@ static const int lcaselbl = 0;                  /* 1 means make tag label lowerc
 #endif // BAR_TAGLABELS_PATCH
 #if BAR_UNDERLINETAGS_PATCH
 static const unsigned int ulinepad = 2;         /* horizontal padding between the underline and tag */
-static const unsigned int ulinestroke  = 2;     /* thickness / height of the underline */
+static const unsigned int ulinestroke  = 4;     /* thickness / height of the underline */
 static const unsigned int ulinevoffset = 0;     /* how far above the bottom of the bar the line should appear */
 static const int ulineall = 0;                  /* 1 to show underline on all tags, 0 for just the active ones */
 #endif // BAR_UNDERLINETAGS_PATCH
@@ -115,7 +115,7 @@ static const int ulineall = 0;                  /* 1 to show underline on all ta
 #define NAMETAG_FORMAT "%s"
 #endif // NAMETAG_PREPEND_PATCH
 /* The maximum amount of bytes reserved for each tag text. */
-#define MAX_TAGLEN 8
+#define MAX_TAGLEN 4 
 /* The command to run (via popen). This can be tailored by adding a prompt, passing other command
  * line arguments or providing name options. Optionally you can use other dmenu like alternatives
  * like rofi -dmenu. */
@@ -126,7 +126,7 @@ static const int ulineall = 0;                  /* 1 to show underline on all ta
 /* alt-tab configuration */
 static const unsigned int tabmodkey        = 0x40; /* (Alt) when this key is held down the alt-tab functionality stays active. Must be the same modifier as used to run alttabstart */
 static const unsigned int tabcyclekey      = 0x17; /* (Tab) when this key is hit the menu moves one position forward in client stack. Must be the same key as used to run alttabstart */
-static const unsigned int tabposy          = 1;    /* tab position on Y axis, 0 = top, 1 = center, 2 = bottom */
+static const unsigned int tabposy          = 2;    /* tab position on Y axis, 0 = top, 1 = center, 2 = bottom */
 static const unsigned int tabposx          = 1;    /* tab position on X axis, 0 = left, 1 = center, 2 = right */
 static const unsigned int maxwtab          = 300;  /* tab menu width */
 static const unsigned int maxhtab          = 200;  /* tab menu height */
@@ -144,7 +144,7 @@ static int floatfakefsindicatortype      = INDICATOR_PLUS_AND_LARGER_SQUARE;
 static const int quit_empty_window_count = 0;   /* only allow dwm to quit if no (<= count) windows are open */
 #endif // ONLYQUITONEMPTY_PATCH
 #if BAR_EXTRASTATUS_PATCH
-static const char statussep              = ';'; /* separator between status bars */
+static const char statussep              = '|'; /* separator between status bars */
 #endif // BAR_EXTRASTATUS_PATCH
 #if BAR_TABGROUPS_PATCH
 #if MONOCLE_LAYOUT
@@ -894,8 +894,8 @@ static const Key keys[] = {
 	{ Mod1Mask|ControlMask, 		XK_Print, 					spawn, {.v = shotnow } },
 
 	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
-	{Mod1Mask,			XK_F1,		spawn,			SHCMD("~/.config/Suckless/rofi/launcher")},
-	{MODKEY,			XK_x,		spawn,			SHCMD("~/.config/Suckless/rofi/powermenu.sh")},
+	{Mod1Mask,			XK_F1,		spawn,			SHCMD("launcher")},
+	{MODKEY,			XK_x,		spawn,			SHCMD("powermenu")},
 	{ MODKEY,             XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = alacritty } },
 { ControlMask|Mod1Mask,             XK_l,     spawn,                  {.v = lockscreen } },

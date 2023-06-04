@@ -28,7 +28,6 @@ fi
 # #                                  FUNCTIONS                                 #
 # ##############################################################################
 
-# Credits to 6gk/polka
 rule() { bspc rule -a "$@" & }
 config() { bspc config "$@" & }
 

@@ -341,8 +341,9 @@
 /* With this patch dwm's built-in status bar is only shown when HOLDKEY is pressed
  * and the bar will now overlay the display.
  * http://dwm.suckless.org/patches/holdbar/
+ * 1
  */
-#define BAR_HOLDBAR_PATCH 0
+#define BAR_HOLDBAR_PATCH 1
 
 /* Sometimes dwm crashes when it cannot render some glyphs in window titles (usually emoji).
  * This patch is essentially a hack to ignore any errors when drawing text on the status bar.
@@ -840,7 +841,7 @@
  *     { ClkClientWin,              0,              Button8,        movemouse,      {0} },
  *     { ClkClientWin,              0,              Button9,        resizemouse,    {0} },
  */
-#define NO_MOD_BUTTONS_PATCH 0
+#define NO_MOD_BUTTONS_PATCH 1
 
 /* When terminals have transparency then their borders also become transparent.
  * This patch ensures that borders have no transparency. Note that this patch is
@@ -961,7 +962,7 @@
  * when including this patch. You will also want to set "borderpx = 0;" in your config.h.
  * https://github.com/mitchweaver/suckless/blob/master/dwm/patches/mitch-06-rounded_corners-f04cac6d6e39cd9e3fc4fae526e3d1e8df5e34b2.patch
  */
-#define ROUNDED_CORNERS_PATCH 1
+#define ROUNDED_CORNERS_PATCH 0
 
 /* This patch saves size and position of every floating window before it is forced
  * into tiled mode. If the window is made floating again then the old dimensions

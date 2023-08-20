@@ -28,6 +28,7 @@ fi
 # #                                  FUNCTIONS                                 #
 # ##############################################################################
 
+# Credits to 6gk/polka
 rule() { bspc rule -a "$@" & }
 config() { bspc config "$@" & }
 
@@ -39,16 +40,15 @@ config() { bspc config "$@" & }
 pgrep -x sxhkd > /dev/null || sxhkd &
 mpd &
 dunst --config $HOME/.config/dunst/dunstrc &
-picom --experimental-backend --config $HOME/.config/bspwm/picom.conf &
+picom &
 eww daemon &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 xfce4-power-manager &
 ksuperkey -e 'Super_L=Alt_L|F1' &
 bspfloat &
-feh --no-fehbg --bg-fill ~/.config/Wallpaper/main.png
+feh --no-fehbg --bg-fill -z ~/.config/Wallpaper/
 xsetroot -cursor_name left_ptr &
 setxkbmap us,ir -option 'grp:alt_shift_toggle' &
-
 # ##############################################################################
 # #                                 WINDOW RULES                               #
 # ##############################################################################
@@ -81,6 +81,6 @@ bspc config external_rules_command ''
 ## Rules
 bspc rule -a 'MATLAB R2018b' state=floating &
 bspc rule -a 'Matplotlib' state=floating &
+bspc rule -a 'matplotlib' state=floating &
 bspc rule -a 'Python3' state=floating &
 bspc rule -a 'Figure' state=floating &
-bspc rule -a 'MyNotes' state=floating &

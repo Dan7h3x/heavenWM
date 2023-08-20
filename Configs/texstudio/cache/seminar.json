@@ -1,0 +1,53 @@
+{
+    "bibitems": [
+    ],
+    "bibtexfiles": [
+    ],
+    "childdocs": [
+    ],
+    "filename": "/run/media/mahdi/Media/Flash/Works/RuminW/seminar.tex",
+    "labels": [
+        "Eq1",
+        "Eq2"
+    ],
+    "modified": "Sat Aug 19 23:45:58 2023",
+    "packages": [
+        "width=15.00cm, height=23.00cm#geometry",
+        "utf8#inputenc",
+        "T1#fontenc",
+        "#amsmath",
+        "#amssymb",
+        "#mathtools",
+        "#xepersian",
+        "#graphicx",
+        "#fancybox",
+        "12pt,a4paper,oneside#latex-document",
+        "12pt,a4paper,oneside#tex",
+        "#amsthm"
+    ],
+    "refs": [
+    ],
+    "toc": [
+        "2#مشتقات#38",
+        "3#مشتقات اندازه‌ها:#39"
+    ],
+    "usercommands": [
+        "example",
+        "example",
+        "proposition",
+        "proposition",
+        "theorem",
+        "theorem",
+        "corollary",
+        "corollary",
+        "\\znd",
+        "definition",
+        "definition",
+        "\\eqnum",
+        "\\Ind",
+        "remark",
+        "remark",
+        "lemma",
+        "lemma"
+    ]
+}

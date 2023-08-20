@@ -58,7 +58,7 @@ static const int sidepad                 = 2;  /* horizontal padding of bar */
 #endif // BAR_PADDING_PATCH
 #if BAR_WINICON_PATCH
 #define ICONSIZE 24    /* icon size */
-#define ICONSPACING 2  /* space between icon and title */
+#define ICONSPACING 4  /* space between icon and title */
 #endif // BAR_WINICON_PATCH
 #if FOCUSONCLICK_PATCH
 static const int focusonwheel            = 0;
@@ -154,9 +154,9 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = { "JetBrainsMono Nerd Font:size=12" };
+static const char font[]                 = { "JetBrainsMono Nerd Font:size=13" };
 #else
-static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=10" };
+static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=13" };
 #endif // BAR_PANGO_PATCH
 static const char dmenufont[]            = "Iosevka Term:size=12";
 #include "themes/tokyo.h"
@@ -266,7 +266,7 @@ static const unsigned int alphas[][3] = {
 };
 #endif // BAR_ALPHA_PATCH
 #if BAR_VTCOLORS_PATCH
-static const char title_bg_dark[]   = "#303030";
+static const char title_bg_dark[]   = "#45557a";
 static const char title_bg_light[]  = "#a1a1a1";
 static const int color_ptrs[][ColCount] = {
 	/*                       fg      bg      border  float */
@@ -355,7 +355,7 @@ static const char *layoutmenu_cmd = "layout.sh";
 
 #if COOL_AUTOSTART_PATCH
 static const char *const autostart[] = {
-	"Todos",NULL,
+	"alacritty","-e","dooit",NULL,
   NULL
 };
 #endif // COOL_AUTOSTART_PATCH
@@ -452,11 +452,13 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 	RULE(.class = "Matlab R2018b", .isfloating = 1)
+	RULE(.class = "Matlab", .isfloating = 1)
   RULE(.class = "sun-awt-X11-XFramePeer", .isfloating = 1)
 
 	RULE(.class = "Alacritty", .isfloating = 1)
 	RULE(.class = "python3", .isfloating = 1)
 	RULE(.class = "Matplotlib", .isfloating = 1)
+	RULE(.class = "matplotlib", .isfloating = 1)
 	RULE(.class = "Lxappearance", .isfloating = 1)
 	RULE(.class = "TelegramDesktop", .isfloating = 1)
 	#if RENAMED_SCRATCHPADS_PATCH
@@ -584,7 +586,7 @@ static const BarRule barrules[] = {
 
 /* layout(s) */
 static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;    /* number of clients in master area */
+static const int nmaster     = 2;    /* number of clients in master area */
 #if FLEXTILE_DELUXE_LAYOUT
 static const int nstack      = 0;    /* number of clients in primary stack area */
 #endif // FLEXTILE_DELUXE_LAYOUT
@@ -895,6 +897,8 @@ static const Key keys[] = {
 
 	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
 	{Mod1Mask,			XK_F1,		spawn,			SHCMD("launcher")},
+	{Mod1Mask,			XK_f,		spawn,			SHCMD("launcherFile")},
+	{Mod1Mask,			XK_w,		spawn,			SHCMD("launcherWin")},
 	{MODKEY,			XK_x,		spawn,			SHCMD("powermenu")},
 	{ MODKEY,             XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = alacritty } },

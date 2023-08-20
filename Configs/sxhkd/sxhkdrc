@@ -1,31 +1,30 @@
 
 super + Return
-	alacritty  
+	st  
 
 super + shift + Return
-  bspwmfloat.sh alacritty 
+  bspwmfloat.sh st 
 
 super + t
-  bspwmfull.sh alacritty -o window.startup_mode=fullscreen window.opacity=0.9 font.size=14
+  bspwmfull.sh st -o window.startup_mode=fullscreen window.opacity=0.9 font.size=14
 alt + F1
     launcher
-
+super + w
+    launcherWin
+alt + f
+    launcherFile
 super + x
-  powermenu
-
+    powermenu
 super + d
     toggle_eww
 
 super + m
-   feh --bg-fill -z ~/Pictures/Wallpaper 
+   feh --bg-fill -z ~/.config/Wallpaper/
 super + o
     eww
 super + s 
     bspwmfloat.sh st
 
-# Color Picker
-super + p
-	sh /usr/local/bin/color-gpick 
 
 # Lockscreen
 ctrl + alt + l
@@ -35,13 +34,13 @@ ctrl + alt + l
 
 # Launch Apps
 super + shift + {f,w,e}
-	{thunar,brave,code}
+	{pcmanfm,chromium,code}
 
 ##---------- System Keys ----------##
 
 # Take a screenshot
 Print
-	takeshot --now
+	takeshot --area
 	
 # Take screenshot in 5 second
 alt + Print	
@@ -57,7 +56,7 @@ ctrl + Print
 
 # Take screenshot of area
 ctrl + alt + Print
-  takeshot --area
+  takeshot --now
 
 # Manage brightness
 XF86MonBrightness{Up,Down}
@@ -136,8 +135,8 @@ super + {Tab,grave}
 	bspc {node,desktop} -f last
 
 # Send focused window to another workspace
-super + {_,shift + }{1-8}
-	bspc {desktop -f,node -d} '^{1-8}'
+super + {_,shift + }{1-9}
+	bspc {desktop -f,node -d} '^{1-9}'
 
 # Expanding windows
 super + control + {Left,Right,Up,Down}

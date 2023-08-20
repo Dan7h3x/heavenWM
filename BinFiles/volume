@@ -3,11 +3,15 @@
 
 # icons
 iDIR='/home/mahdi/.config/dunst/icons/dunst'
-
+notify_cmd='dunstify -u low -h string:x-dunst-stack-tag:obvolume'
 # Get Volume
 get_volume() {
-	volume=`amixer get Master | tail -n1 | awk -F ' ' '{print $5}' | tr -d '[]'`
-	echo "$volume"
+	echo "`pulsemixer --get-volume | cut -d' ' -f1`"
+}
+
+# Notify
+notify_user() {
+	${notify_cmd} -i "$icon" "Volume : $(get_volume)%"
 }
 
 # Get icons
@@ -25,52 +29,56 @@ get_icon() {
 	fi
 }
 
-# Notify 
-notify_vol() {
-	get_icon && dunstify -u low --replace=69 -i "$icon" "Volume : $(get_volume)"
-}
-
 # Increase Volume
 inc_volume() {
-	amixer -Mq set Master 5%+ unmute && notify_vol
+	[[ `pulsemixer --get-mute` == 1 ]] && pulsemixer --unmute
+	pulsemixer --max-volume 100 --change-volume +5 && get_icon && notify_user
 }
+
 
 # Decrease Volume
 dec_volume() {
-	amixer -Mq set Master 5%- unmute && notify_vol
+	[[ `pulsemixer --get-mute` == 1 ]] && pulsemixer --unmute
+	pulsemixer --max-volume 100 --change-volume -5 && get_icon && notify_user
 }
 
 # Toggle Mute
 toggle_mute() {
-	amixer get Master | grep '\[on\]' &>/dev/null
-	if [[ "$?" == 0 ]]; then
-		amixer set Master toggle && dunstify -u low --replace=69 -i "$iDIR/volume-mute.png" "Mute"
+	if [[ `pulsemixer --get-mute` == 0 ]]; then
+		pulsemixer --toggle-mute && ${notify_cmd} -i "$iDIR/volume-mute.png" "Mute"
 	else
-		amixer set Master toggle && get_icon && dunstify -u low --replace=69 -i "$icon" "Unmute"
+		pulsemixer --toggle-mute && get_icon && ${notify_cmd} -i "$icon" "Unmute"
 	fi
 }
 
+
 # Toggle Mic
 toggle_mic() {
-	amixer get Capture | grep '\[on\]' &>/dev/null
-	if [[ "$?" == 0 ]]; then
-		amixer -D pulse sset Capture toggle && dunstify -u low --replace=69 -i "$iDIR/microphone-mute.png" "Microphone Switched OFF"
+	ID="`pulsemixer --list-sources | grep 'Default' | cut -d',' -f1 | cut -d' ' -f3`"
+	if [[ `pulsemixer --id $ID --get-mute` == 0 ]]; then
+		pulsemixer --id ${ID} --toggle-mute && ${notify_cmd} -i "$iDIR/microphone-mute.png" "Microphone Switched OFF"
 	else
-		amixer -D pulse sset Capture toggle && dunstify -u low --replace=69 -i "$iDIR/microphone.png" "Microphone Switched ON"
+		pulsemixer --id ${ID} --toggle-mute && ${notify_cmd} -i "$iDIR/microphone.png" "Microphone Switched ON"
 	fi
 }
 
 # Execute accordingly
-if [[ "$1" == "--get" ]]; then
-	get_volume
-elif [[ "$1" == "--inc" ]]; then
-	inc_volume
-elif [[ "$1" == "--dec" ]]; then
-	dec_volume
-elif [[ "$1" == "--toggle" ]]; then
-	toggle_mute
-elif [[ "$1" == "--toggle-mic" ]]; then
-	toggle_mic
+if [[ -x `which pulsemixer` ]]; then
+	if [[ "$1" == "--get" ]]; then
+		get_volume
+	elif [[ "$1" == "--inc" ]]; then
+		inc_volume
+	elif [[ "$1" == "--dec" ]]; then
+		dec_volume
+	elif [[ "$1" == "--toggle" ]]; then
+		toggle_mute
+	elif [[ "$1" == "--toggle-mic" ]]; then
+		toggle_mic
+	else
+		echo $(get_volume)%
+	fi
 else
-	get_volume
+	${notify_cmd} "'pulsemixer' is not installed."
 fi
+
+

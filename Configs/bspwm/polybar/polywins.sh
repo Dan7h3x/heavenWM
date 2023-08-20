@@ -173,8 +173,9 @@ generate_window_list() {
             "icon")
                 case "$cls" in
                     Alacritty) w_name='󰲇' ;;
+                    St) w_name='󰲇' ;;
                     Browser) w_name='󰈹' ;;
-                    Chromium) w_name='󰊯 ' ;;
+                    Chromium) w_name='󰊯' ;;
                     TelegramDesktop) w_name='󰗍' ;;
                     Pcmanfm) w_name='󰚝' ;;
                     Thunar) w_name='󰚝' ;;
@@ -193,6 +194,7 @@ generate_window_list() {
                     Figure) w_name='󰌠' ;;
                     MyNotes) w_name='󰁳' ;;
                     Matplotlib) w_name='󰌠' ;;
+                    matplotlib) w_name='󰌠' ;;
                     Spyder) w_name='󱔎' ;;
                     Blender) w_name='󰂫' ;;
                     duckstation-qt) w_name='󰊗' ;;

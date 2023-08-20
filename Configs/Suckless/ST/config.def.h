@@ -111,7 +111,7 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* bg opacity */
 float alpha = 0.80;
@@ -199,8 +199,8 @@ static unsigned int cursorshape = 1;
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 80;
-static unsigned int rows = 24;
+static unsigned int cols = 85;
+static unsigned int rows = 26;
 
 /*
  * Default colour and shape of the mouse cursor

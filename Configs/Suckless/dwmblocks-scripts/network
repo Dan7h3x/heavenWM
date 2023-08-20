@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-is_eth_used=$(cat /sys/class/net/lo/carrier)
-is_wlan_used=$(cat /sys/class/net/wlo1/carrier)
+is_eth_used=$(cat /sys/class/net/l*/carrier)
+is_wlan_used=$(cat /sys/class/net/wl*/carrier)
 
 echo -n "^c#88c0d0^"
 

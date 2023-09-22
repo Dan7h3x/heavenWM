@@ -1,12 +1,12 @@
-sw_volume: 100
-audio_device_state:0:ALSA [Bit-perfect]
+sw_volume: 69
+audio_device_state:0:PipeWire Sound Server
 audio_device_state:1:PulseAudio
 audio_device_state:1:Visualizer
 state: pause
-current: 18
-time: 149.941000
+current: 183
+time: 78.688000
 random: 1
-repeat: 0
+repeat: 1
 single: 0
 consume: 0
 crossfade: 0
@@ -55,4 +55,553 @@ playlist_begin
 39:Rap/Allame - Kambur.mp3
 40:Rap/Allame-Hayalin-Yeri-Yok.mp3
 41:Rap/Allame - Yaz Baştan.mp3
+42:adamlar/Adamlar  Hikaye.mp3
+43:adamlar/Adamlar - Acının İlacı - GuncelMp3Indir.Com.mp3
+44:adamlar/Adamlar - Acının İlacı.mp3
+45:adamlar/Adamlar - Adını Başkasının Koyduğu Çocuklar.mp3
+46:adamlar/Adamlar - Benden Bana.mp3
+47:adamlar/Adamlar - Bi Öyle Bi Böyle.mp3
+48:adamlar/Adamlar - Çek Sifonu.mp3
+49:adamlar/Adamlar - Doldum.mp3
+50:adamlar/Adamlar - E Tabi.mp3
+51:adamlar/Adamlar - Felek.mp3
+52:adamlar/Adamlar - Koca Yaşlı Şişko Dünya.mp3
+53:adamlar/Adamlar - Mavi Ekran.mp3
+54:adamlar/Adamlar - Rüyalarda Buruşmuşum.mp3
+55:adamlar/Adamlar - Sarılırım Birine.mp3
+56:adamlar/Adamlar - Tın Tın.mp3
+57:adamlar/Adamlar – Ah Benim Hayatım.mp3
+58:adamlar/Adamlar – Kadın.mp3
+59:adamlar/Adamlar – Kapısı Kapalı.mp3
+60:adamlar/Ateş Ederim   Adamlar.mp3
+61:adamlar/Phantogram_Black_Out_Days_Future_Islands_Remix_Audio_320_kbps.mp3
+62:adamlar/Utanmazsan Unutmam   Adamlar.mp3
+63:adamlar/Adamlar - Dal.mp3
+64:adamlar/Adamlar - Gelir Geçer.mp3
+65:adamlar/Adamlar - İçimizdeki Canavarlar.mp3
+66:adamlar/Adamlar_Döndürüyor_Kl35tdOkTHU_140.mp3
+67:adamlar/Adamlar_Hayret_Official_Lyric_Video__4b7AaJBPqHc_140.mp3
+68:adamlar/Adamlar_Okyanus_ONCuNbq5DII_140.mp3
+69:adamlar/Adamlar_Yaktı_Geçti_gWNfTHFEEKc_140.mp3
+70:adamlar/Gunel Dunya Dunya.mp3
+71:adamlar/Gripin - Belki Cok da Sey Yapmamak Lazim.mp3
+72:adamlar/mp3indirdur-Adamlar-Zombi-Mahali.mp3
+73:adamlar/02 Adamlar - Yoruldum.mp3
+74:adamlar/Adamlar - Derine İndik.mp3
+75:adamlar/Kendime Çaylar - Adamlar.m4a
+76:adamlar/Kapısı Kapalı   Adamlar.mp3
+77:adamlar/Adamlar - İnsanın Düştüğü Durumlar.mp3
+78:adamlar/Koşmadan   Adamlar.mp3
+79:adamlar/Öyle Normal   Adamlar.mp3
+80:adamlar/Bizim Zamanımız   Adamlar.mp3
+81:adamlar/Adamlar - Küçüğüm.mp3
+82:adamlar/adamlar-sakaci-birisin-sen.mp3
+83:adamlar/mp3indirdur-Adamlar-Orda-Ortada.mp3
+84:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/117261666.mp3
+85:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/118865441.mp3
+86:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/120871230.mp3
+87:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/120871762.mp3
+88:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/120871999.mp3
+89:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/120872401.mp3
+90:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/120873286.mp3
+91:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/Imagine-Dragons-I-Dont-Know-Why-320.mp3
+92:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/01. My Life.mp3
+93:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/02. Lonely.mp3
+94:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/03. Wrecked.mp3
+95:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/04. Monday.mp3
+96:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/05. #1.mp3
+97:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/06. Easy Come Easy Go.mp3
+98:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/07. Giants.mp3
+99:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/08. It's Ok.mp3
+100:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/10. Follow You.mp3
+101:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/12. No Time For Toxic People.mp3
+102:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/13. One Day.mp3
+103:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/02 Symphony.mp3
+104:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/05 Blur.mp3
+105:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/06 Higher Ground.mp3
+106:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/09 Waves.mp3
+107:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/15 Younger.mp3
+108:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/16 I Wish.mp3
+109:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/17. Continual.mp3
+110:Imagine Dragons - Mercury - Act 1 (2021) Mp3 320kbps [PMEDIA] ⭐️/01 Sharks.mp3
+111:Telegram/03_GETME_GETME_-AMAN_OVCHU.mp3
+112:Telegram/110517696.mp3
+113:Telegram/118943072.mp3
+114:Telegram/118949824 (2).mp3
+115:Telegram/118949824.mp3
+116:Telegram/122445018.mp3
+117:Telegram/127159488.mp3
+118:Telegram/127175906.mp3
+119:Telegram/129955120.mp3
+120:Telegram/2_5197571926138036718.mp3
+121:Telegram/2_5197571926138036732.mp3
+122:Telegram/2_5197571926138036767.mp3
+123:Telegram/2_5197571926138036769.mp3
+124:Telegram/2_5197571926138036777.mp3
+125:Telegram/2_5201678533348295833.mp3
+126:Telegram/2_5201678533348295835.mp3
+127:Telegram/2_5201678533348295836.mp3
+128:Telegram/2_5201748704523978139.mp3
+129:Telegram/2_5201876217808029436.mp3
+130:Telegram/2_5201876217808029437.mp3
+131:Telegram/2_5201876217808029438.mp3
+132:Telegram/2_5201876217808029439.mp3
+133:Telegram/2_5201876217808029440.mp3
+134:Telegram/2_5201876217808029446.mp3
+135:Telegram/2_5201953613118703275.mp3
+136:Telegram/2_5201968207417578778.mp3
+137:Telegram/2_5204003768512808140.mp3
+138:Telegram/2_5206255568326493274.mp3
+139:Telegram/2_5219980784860923305.mp3
+140:Telegram/2_5219980784860923306.mp3
+141:Telegram/2_5219980784860923307.mp3
+142:Telegram/2_5219980784860923308.mp3
+143:Telegram/2_5219980784860923309.mp3
+144:Telegram/2_5219980784860923310.mp3
+145:Telegram/2_5219980784860923311.mp3
+146:Telegram/2_5219980784860923312.mp3
+147:Telegram/2_5219980784860923313.mp3
+148:Telegram/2_5219980784860923314.mp3
+149:Telegram/2_5219980784860923315.mp3
+150:Telegram/2_5219980784860923317.mp3
+151:Telegram/2_5219980784860923318.mp3
+152:Telegram/2_5219980784860923319.mp3
+153:Telegram/2_5219980784860923320.mp3
+154:Telegram/2_5219980784860923321.mp3
+155:Telegram/2_5219980784860923322.mp3
+156:Telegram/2_5221990146655651026.mp3
+157:Telegram/2_5221990146655651027.mp3
+158:Telegram/2_5221990146655651028.mp3
+159:Telegram/2_5221990146655651029.mp3
+160:Telegram/2_5221990146655651030.mp3
+161:Telegram/2_5221990146655651031.mp3
+162:Telegram/2_5221990146655651033.mp3
+163:Telegram/2_5221990146655651034.mp3
+164:Telegram/2_5221990146655651036.mp3
+165:Telegram/2_5221990146655651037.mp3
+166:Telegram/2_5221990146655651038.mp3
+167:Telegram/2_5221990146655651039.mp3
+168:Telegram/2_5221990146655651040.mp3
+169:Telegram/2_5221994239759483900.mp3
+170:Telegram/2_5221994239759483901.mp3
+171:Telegram/2_5222124519002474249.mp3
+172:Telegram/2_5271649026683438117.mp3
+173:Telegram/2_5271649026683438118.mp3
+174:Telegram/2_5271649026683438119.mp3
+175:Telegram/2_5271649026683438120.mp3
+176:Telegram/2_5271649026683438121.mp3
+177:Telegram/2_5271649026683438122.mp3
+178:Telegram/2_5271649026683438123.mp3
+179:Telegram/2_5271649026683438124.mp3
+180:Telegram/2_5271649026683438125.mp3
+181:Telegram/2_5271649026683438130.mp3
+182:Telegram/2_5271649026683438131.mp3
+183:Telegram/2_5271649026683438132.mp3
+184:Telegram/2_5271649026683438133.mp3
+185:Telegram/2_5271649026683438134.mp3
+186:Telegram/2_5271649026683438135.mp3
+187:Telegram/2_5271649026683438138.mp3
+188:Telegram/2_5271649026683438139.mp3
+189:Telegram/2_5271649026683438140.mp3
+190:Telegram/2_5271761610661169060.mp3
+191:Telegram/2_5271761610661169061.mp3
+192:Telegram/2_5271761610661169063.mp3
+193:Telegram/2_5271761610661169065.mp3
+194:Telegram/2_5271761610661169066.mp3
+195:Telegram/2_5274241799655785327.mp3
+196:Telegram/2_5274241799655785328.mp3
+197:Telegram/2_5274241799655785329.mp3
+198:Telegram/2_5274241799655785330.mp3
+199:Telegram/2_5274241799655785333.mp3
+200:Telegram/2_5274241799655785334.mp3
+201:Telegram/2_5274241799655785336.mp3
+202:Telegram/2_5274241799655785337.mp3
+203:Telegram/2_5278448453834251465.mp3
+204:Telegram/2_5330399411879026084.mp3
+205:Telegram/2_5330538487215038028.mp3
+206:Telegram/2_5330538487215038030.mp3
+207:Telegram/2_5330538487215038092.mp3
+208:Telegram/2_5330538487215038201.mp3
+209:Telegram/2_5330538487215038203.mp3
+210:Telegram/2_5332496713129133337.mp3
+211:Telegram/2_5334761157326545145.m4a
+212:Telegram/2_5350443036406980017.mp3
+213:Telegram/2_5350443036406980022.mp3
+214:Telegram/2_5350443036406980023.mp3
+215:Telegram/2_5350443036406980025.mp3
+216:Telegram/2_5350443036406980028.mp3
+217:Telegram/2_5350443036406980030.mp3
+218:Telegram/2_5350443036406980033.mp3
+219:Telegram/2_5350443036406980039.mp3
+220:Telegram/2_5350443036406980042.mp3
+221:Telegram/2_5350443036406980043.mp3
+222:Telegram/2_5350443036406980045.mp3
+223:Telegram/2_5350443036406980046.mp3
+224:Telegram/2_5350443036406980048.mp3
+225:Telegram/2_5350443036406980061.mp3
+226:Telegram/2_5350443036406980064.mp3
+227:Telegram/2_5350443036406980066.mp3
+228:Telegram/2_5350443036406980070.mp3
+229:Telegram/2_5350443036406980072.mp3
+230:Telegram/2_5350443036406980074.mp3
+231:Telegram/2_5350443036406980077.mp3
+232:Telegram/2_5350443036406980080.mp3
+233:Telegram/2_5350443036406980082.mp3
+234:Telegram/2_5350443036406980092.mp3
+235:Telegram/2_5350443036406980093.mp3
+236:Telegram/2_5350443036406980096.mp3
+237:Telegram/2_5350443036406980100.mp3
+238:Telegram/2_5350443036406980104.mp3
+239:Telegram/2_5350443036406980105.mp3
+240:Telegram/2_5350443036406980107.mp3
+241:Telegram/2_5350443036406980111.mp3
+242:Telegram/2_5350443036406980112.mp3
+243:Telegram/2_5350443036406980119.mp3
+244:Telegram/2_5350443036406980121.mp3
+245:Telegram/2_5350443036406980126.mp3
+246:Telegram/2_5350443036406980128.mp3
+247:Telegram/2_5350443036406980130.mp3
+248:Telegram/2_5350443036406980134.mp3
+249:Telegram/2_5350443036406980143.mp3
+250:Telegram/2_5350443036406980147.mp3
+251:Telegram/2_5350443036406980161.mp3
+252:Telegram/2_5350443036406980162.mp3
+253:Telegram/2_5350443036406980163.mp3
+254:Telegram/2_5350443036406980189.mp3
+255:Telegram/2_5363821868123953112.m4a
+256:Telegram/2_5368334113520492182.mp3
+257:Telegram/2_5388940048051733961.mp3
+258:Telegram/2_5417908709110060835.mp3
+259:Telegram/2_763504293122132433.mp3
+260:Telegram/35264645.mp3
+261:Telegram/4_5769613075489489760.mp3
+262:Telegram/4_5789670907769261998.mp3
+263:Telegram/4_5796327389818524354.mp3
+264:Telegram/4_5843928886022246246.mp3
+265:Telegram/4_5886280987297448283.mp3
+266:Telegram/4_5909061356396480176.m4a
+267:Telegram/4_5913341480285507888.mp3
+268:Telegram/4_5927144757850541459.mp3
+269:Telegram/4_5936211824654422769.mp3
+270:Telegram/4_5940520179363481709.mp3
+271:Telegram/4_594184613455200538.mp3
+272:Telegram/4_5944862850861237084.mp3
+273:Telegram/4_5956083556001253181.mp3
+274:Telegram/4_5960662613909053208.m4a
+275:Telegram/4_5960662613909053753.m4a
+276:Telegram/4_5960662613909054170.m4a
+277:Telegram/4_5960662613909054449.m4a
+278:Telegram/4_5989904344693084103.mp3
+279:Telegram/4_6010209528434407850.mp3
+280:Telegram/4_6014763924639974685.mp3
+281:Telegram/4_6039871100861563881.mp3
+282:Telegram/4_6044380915306597794.mp3
+283:Telegram/4_6046420161483770366.mp3
+284:Telegram/4_610764862255006455.mp3
+285:Telegram/4_723784306721086669.mp3
+286:Telegram/41 Rather Be.mp3
+287:Telegram/43_Mensum_Ibrahimov_-_Yana-yana_kul_oldum.mp3
+288:Telegram/628394eb4cdeb.mp3
+289:Telegram/7.mp3
+290:Telegram/771460738.mp3
+291:Telegram/95908316 (2).mp3
+292:Telegram/95908316.mp3
+293:Telegram/96288531.mp3
+294:Telegram/998714523.mp3
+295:Telegram/Alibaba Mammadov _#187; Dəşti _#187; Azərbaycan musiqisi.mp3
+296:Telegram/Bach_Study_Music_Playlist_Instrumental_Classical_Music_w3HCPVMtd8M.m4a
+297:Telegram/Bayati_shiraz.mp3
+298:Telegram/Biri sensen  biri men.mp3
+299:Telegram/Cem_Yılmaz_Bir_Tat_Bir_Doku_Gösteri_2_Official_Audio_ce_QRC0h4rpDow.m4a
+300:Telegram/Cem_Yılmaz_Bir_Tat_Bir_Doku_Gösteri_3_Official_Audio_ce_gogYDZWSlqE.m4a
+301:Telegram/Cem_Yılmaz_Bir_Tat_Bir_Doku_Gösteri_4_Official_Audio_ce_t_KHQ1lx6tU.m4a
+302:Telegram/DAGLARDA_DUMAN_GOZALDIR.mp3
+303:Telegram/Elibaba Memmedov - Bayati Shiraz Tesnifi (Alibaba Mammadov).mp3
+304:Telegram/GAL-GAL_ADI_CEYRAN.mp3
+305:Telegram/Hamidan gozel menem.mp3
+306:Telegram/Hayki-Ruzgar-feat-Ceza-26.mp3
+307:Telegram/Islam-Rzayev-Var-gulushunde_5569302.mp3
+308:Telegram/Kaan Boşnak - Eğer (HQ).mp3
+309:Telegram/libaba_Məmmədov_Bayatı_Şiraz_təs.mp3
+310:Telegram/MULTITAP-Bir-Sey-Mi-var-official_3835996 (2).mp3
+311:Telegram/Musu.mp3
+312:Telegram/NEZAKET._T_-_NEYCHUN_GELMEZ_-_DAGLARIN_BASHI.mp3
+313:Telegram/Norm Ender - Sadece Öpücem.mp3
+314:Telegram/Ozbi - Olmazlara Yandım.mp3
+315:Telegram/Pinhani - Dön Bak Dünyaya.mp3
+316:Telegram/Pinhani - Sen Olmayınca.mp3
+317:Telegram/Polad Bülbüloğlu – Gəl Ey Səhər.mp3
+318:Telegram/Polad_Bülbüloğlu_Albom_Retro_Azerbaijan_Retro_mahnilar_hAm7R_QJdqk.m4a
+319:Telegram/RagnBone-Man-Human_11476021.mp3
+320:Telegram/shovket-elekberova-axsham-mahnisi.mp3
+321:Telegram/shovket-elekberova-tez-gel.mp3
+322:Telegram/SkqHCzv-pn0.m4a
+323:Telegram/sura-iskəndərli--.mp3
+324:Telegram/tarkaman.mp3
+325:Telegram/The_most_Beautiful_and_Relaxing_Piano_Pieces_Vol_2_Moz_yE_DzFfJ9bU.m4a
+326:Telegram/The_Most_Beautiful_Relaxing_Piano_Pieces_Vol_1_WJ3_F02_F_Y_140.m4a
+327:Telegram/twenty_one_pilots_Heathens_from.mp3
+328:Telegram/yt1s.com - Rubabe Muradova Heyder babaya salam.mp3
+329:Telegram/Yüzyüzeyken Konuşuruz - Konuşulacak Şeyler.mp3
+330:Telegram/استريو نور كرج 09125648198.mp3
+331:Telegram/4_5958511015682377127.mp3
+332:Telegram/Javid Tabrizli - Dashligala.mp3
+333:Telegram/26. mor ve ötesi - Bir Derdim Var.mp3
+334:Telegram/Twenty One Pilots _ heathens (320) (2).mp3
+335:Telegram/Twenty One Pilots _ heathens (320).mp3
+336:Telegram/36 SEXAVET MEMMEDOV-AZAD BIR QUSHDUM.mp3
+337:Telegram/4_476891526207641010.mp3
+338:Telegram/4_5868482093067014070.mp3
+339:Telegram/music-590957265.mp3
+340:Telegram/Konusun Konusun.mp3
+341:Telegram/4_356350936878157375.mp3
+342:Telegram/Əlibaba Məmmədov  - Muxalif Təsnifi.mp3
+343:Telegram/2_5314779255773597223.mp3
+344:Telegram/4_505426782116676224.mp3
+345:Telegram/Lizzo About Damn Time.mp3
+346:Telegram/4_5931752665053761333.mp3
+347:Telegram/Adamlar_Döndürüyor_Kl35tdOkTHU_140.mp3
+348:Telegram/4_5931752665053760969.mp3
+349:Telegram/Adamlar_Hayret_Official_Lyric_Video__4b7AaJBPqHc_140.mp3
+350:Telegram/4_5931752665053761198.mp3
+351:Telegram/Adamlar_Okyanus_ONCuNbq5DII_140.mp3
+352:Telegram/4_5931752665053761059.mp3
+353:Telegram/Adamlar_Yaktı_Geçti_gWNfTHFEEKc_140.mp3
+354:Telegram/4_5868218699902617727.mp3
+355:Telegram/2_5370666663014311136.mp3
+356:Telegram/2_5370666663014311137.mp3
+357:Telegram/2_5370666663014311138.mp3
+358:Telegram/2_5370666663014311140.mp3
+359:Telegram/2_5355058326658883314.m4a
+360:Telegram/2_5219918104108214005.mp3
+361:Telegram/2_5363956489578881107.mp3
+362:Telegram/2_5363956489578881113.mp3
+363:Telegram/2_5363956489578881116.mp3
+364:Telegram/2_5363956489578881117.mp3
+365:Telegram/2_5363956489578881118.mp3
+366:Telegram/2_5363956489578881125.mp3
+367:Telegram/2_5363956489578881127.mp3
+368:Telegram/2_5363956489578881128.mp3
+369:Telegram/2_5363956489578881130.mp3
+370:Telegram/2_5363956489578881135.mp3
+371:Telegram/2_5363956489578881136.mp3
+372:Telegram/2_5363956489578881137.mp3
+373:Telegram/2_5363956489578881138.mp3
+374:Telegram/2_5363956489578881140.mp3
+375:Telegram/2_5363956489578881141.mp3
+376:Telegram/2_5363956489578881142.mp3
+377:Telegram/2_5363956489578881147.mp3
+378:Telegram/2_5363956489578881148.mp3
+379:Telegram/2_5363956489578881149.mp3
+380:Telegram/2_5363956489578881152.mp3
+381:Telegram/2_5363956489578881155.mp3
+382:Telegram/2_5363956489578881156.mp3
+383:Telegram/2_5363956489578881160.mp3
+384:Telegram/2_5363956489578881162.mp3
+385:Telegram/2_5363956489578881166.mp3
+386:Telegram/2_5363956489578881175.mp3
+387:Telegram/2_5363956489578881176.mp3
+388:Telegram/2_5363956489578881177.mp3
+389:Telegram/2_5363956489578881178.mp3
+390:Telegram/2_5363956489578881181.mp3
+391:Telegram/2_5363956489578881183.mp3
+392:Telegram/2_5363956489578881184.mp3
+393:Telegram/2_5363956489578881186.mp3
+394:Telegram/2_5363956489578881187.mp3
+395:Telegram/2_5363956489578881188.mp3
+396:Telegram/2_5363956489578881189.mp3
+397:Telegram/2_5363956489578881192.mp3
+398:Telegram/2_5363956489578881193.mp3
+399:Telegram/2_5363956489578881194.mp3
+400:Telegram/2_5363956489578881195.mp3
+401:Telegram/2_5363956489578881199.mp3
+402:Telegram/2_5363956489578881200.mp3
+403:Telegram/2_5363956489578881201.mp3
+404:Telegram/2_5363956489578881202.mp3
+405:Telegram/2_5363956489578881203.mp3
+406:Telegram/2_5363956489578881205.mp3
+407:Telegram/2_5363956489578881206.mp3
+408:Telegram/2_5363956489578881207.mp3
+409:Telegram/2_5363956489578881208.mp3
+410:Telegram/2_5363956489578881209.mp3
+411:Telegram/2_5363956489578881211.mp3
+412:Telegram/2_5363956489578881214.mp3
+413:Telegram/2_5363956489578881216.mp3
+414:Telegram/2_5363956489578881217.mp3
+415:Telegram/2_5363956489578881219.mp3
+416:Telegram/2_5363956489578881597.mp3
+417:Telegram/2_5363956489578881598.mp3
+418:Telegram/2_5363956489578881600.mp3
+419:Telegram/2_5363956489578881601.mp3
+420:Telegram/2_5363956489578881616.mp3
+421:Telegram/2_5363956489578881617.mp3
+422:Telegram/2_5363956489578881624.mp3
+423:Telegram/2_5363956489578881625.mp3
+424:Telegram/2_5363956489578881628.mp3
+425:Telegram/2_5363956489578881629.mp3
+426:Telegram/2_5363956489578881630.mp3
+427:Telegram/2_5366208289392566496.mp3
+428:Telegram/2_5366208289392566497.mp3
+429:Telegram/2_5366208289392566498.mp3
+430:Telegram/2_5366208289392566503.mp3
+431:Telegram/2_5366208289392566505.mp3
+432:Telegram/2_5366208289392566506.mp3
+433:Telegram/2_5366208289392566508.mp3
+434:Telegram/2_5366208289392566518.mp3
+435:Telegram/Javid Tabrizli - Intizar.mp3
+436:Telegram/Javid Tabrizli - Durnam.mp3
+437:Telegram/Lauv - All 4 Nothing (I m So In Love).mp3
+438:Telegram/2_5231322277366211417.mp3
+439:Telegram/2_5366208289392566522.mp3
+440:Telegram/Zeynep Bastık - Ara.mp3
+441:Telegram/4_5936138247569673165.mp3
+442:Telegram/Harry Styles As It Was.mp3
+443:Telegram/2_5348194157171056557.mp3
+444:Telegram/2_5350443036406980210.m4a
+445:Telegram/Barbar [TubeRipper.com].m4a
+446:Telegram/2_5190439686266429736.mp3
+447:Telegram/2_5350443036406980195.m4a
+448:Telegram/Bebeğim [TubeRipper.com].m4a
+449:Telegram/2_5350443036406980243.mp3
+450:Telegram/Beklenen Gemi.mp3
+451:Telegram/2_5350445956984741179.mp3
+452:Telegram/2_5368585579560706858.mp3
+453:Telegram/Bi' Tek Ben Anlarim.mp3
+454:Telegram/2_5366208289392567946.mp3
+455:Telegram/2_5330538487215038022.mp3
+456:Telegram/2_5330538487215038027.mp3
+457:Telegram/2_5330538487215038029.mp3
+458:Telegram/2_5350443036406980194.m4a
+459:Telegram/Bırakma Kendini [TubeRipper.com].m4a
+460:Telegram/2_5363956489578881576.mp3
+461:Telegram/Can_Bonomo_Şiirler_İçen_Baykuş_9MmMU8WgM-0_140.mp3
+462:Telegram/Elton John Dua Lipa Cold Heart.mp3
+463:Telegram/KONGOS - Come With Me Now.mp3
+464:Telegram/2_5364073853855210835.mp3
+465:Telegram/2_5363956489578881566.mp3
+466:Telegram/2_5350445956984741157.mp3
+467:Telegram/2_5363956489578881020.mp3
+468:Telegram/2_5350443036406980250.mp3
+469:Telegram/Kaan Boşnak - Delik Deşik.mp3
+470:Telegram/2_5350443036406980174.m4a
+471:Telegram/2_5350443036406980176.m4a
+472:Telegram/2_5350443036406980178.m4a
+473:Telegram/2_5350443036406980180.m4a
+474:Telegram/2_5350443036406980182.mp3
+475:Telegram/2_5350445956984741188.mp3
+476:Telegram/2_5314779255773597239.mp3
+477:Telegram/Glass Animals Heat Waves.mp3
+478:Telegram/4_5825935614456893049.mp3
+479:Telegram/4_5823187011481114153.mp3
+480:Telegram/UZI - XXL.mp3
+481:Telegram/4_5823187011481114172.mp3
+482:Telegram/UZI - SENIN UGRUNA.mp3
+483:Telegram/2_5370662428176556503.mp3
+484:Telegram/4_6039437661352051186.mp3
+485:Telegram/Erdal_Erzincan_Türkü_288_Bölüm_Güldür_Güldür_Show_w1pXamSqwHo.mp3
+486:Telegram/Öyle Normal   Adamlar.mp3
+487:Telegram/2_5348194157171056445.mp3
+488:Telegram/Taylor Swift Willow (2).mp3
+489:Telegram/Taylor Swift Willow.mp3
+490:Telegram/Imagine-Dragons-I-Dont-Know-Why-320.mp3
+491:Telegram/Əlibaba_Məmmədov_Vətən_yaxşıdır_Xudayar_təsnifi_wNNbvVHl4ik_140.mp3
+492:Telegram/2_5228751155324004890.mp3
+493:Telegram/4_5988049228058855329.mp3
+494:Telegram/4_5886342495524097480.mp3
+495:Telegram/08 A Sky Full Of Stars.mp3
+496:Telegram/02. Magic.mp3
+497:Telegram/03. Ink.mp3
+498:Telegram/2_5350443036406980241.mp3
+499:Telegram/4_6030820771545220200.mp3
+500:Telegram/2_5350443036406980164.mp3
+501:Telegram/2_5253748401857629891.mp3
+502:Telegram/2_5253748401857629892.mp3
+503:Telegram/2_5253748401857629893.mp3
+504:Telegram/2_5253748401857629894.mp3
+505:Telegram/2_5364073853855210846.mp3
+506:Telegram/4_5974286069783332586.mp3
+507:Telegram/2_5229202964408706634.mp3
+508:Telegram/2_5231454764222391774.mp3
+509:Telegram/2_5350443036406980231.m4a
+510:Telegram/İçi Dolu Her Şeyim [TubeRipper.com].m4a
+511:Telegram/2_463301150171929458.mp3
+512:Telegram/Micheal Buble - Feeling Good.mp3
+513:Telegram/2_5370662428176556600.mp3
+514:Telegram/2_5370662428176556605.mp3
+515:Telegram/2_5352852315491539652.m4a
+516:Telegram/4_5848127762014931485.mp3
+517:Telegram/Adamlar-Karanlik-73.mp3
+518:Telegram/2_5386679091367777080.m4a
+519:Telegram/2_5350443036406980233.mp3
+520:Telegram/2_5363956489578881582.mp3
+521:Telegram/2_5370666663014310996.mp3
+522:Telegram/2_5370666663014310999.mp3
+523:Telegram/2_5370666663014311001.mp3
+524:Telegram/2_5370666663014311002.mp3
+525:Telegram/Manga - Dursun Zaman - Dursun Zaman.mp3
+526:Telegram/15 Younger.mp3
+527:Telegram/16 I Wish.mp3
+528:Telegram/17. Continual.mp3
+529:Telegram/2_513703871290694100.mp3
+530:Telegram/Miu.mp3
+531:Telegram/Burak Kut  - Komple .mp3
+532:Telegram/2_463301150172279641.mp3
+533:Telegram/Eminem - Without Me.mp3
+534:Telegram/Coldplay-Paradise (r-music.blog.ir).mp3
+535:Telegram/Pargar-20190831-.mp3
+536:Telegram/2_5368334113520492192.mp3
+537:Telegram/2_5368334113520492194.mp3
+538:Telegram/1_4909396220625027094.mp3
+539:Telegram/03 Sit Next to Me.mp3
+540:Telegram/2_5377433242255236366.mp3
+541:Telegram/2_5366208289392566524.mp3
+542:Telegram/2_5366208289392566515.mp3
+543:Telegram/2_5366105502235234110.mp3
+544:Telegram/2_5350443036406980208.m4a
+545:Telegram/Seni Buldum Ya [TubeRipper.com].m4a
+546:Telegram/2_5350755787335539780.mp3
+547:Telegram/Aman Aman (2).mp3
+548:Telegram/BoyWithUke-Understand-320 (2).mp3
+549:Telegram/BoyWithUke-Understand-320.mp3
+550:Telegram/2_5366105502235234111.mp3
+551:Telegram/Spice_Sean_Paul_Shaggy_Go_Down_Deh_Lyrics_BASS_BOOSTED_CAR_MUSIC.mp3
+552:Telegram/01 You Need To Calm Down.mp3
+553:Telegram/2_5350443036406980249.mp3
+554:Telegram/Anıl Piyancı & Kaan Boşnak - Taksim.mp3
+555:Telegram/4_6005826475654121828.mp3
+556:Telegram/2_763504293122755343.mp3
+557:Telegram/4_5933650658346404424.mp3
+558:Telegram/Clean Bandit Mabel 24kGoldn Tick Tock.mp3
+559:Telegram/2_5278400384560269714.mp3
+560:Telegram/4_519718410347610330.mp3
+561:Telegram/2_763504293122940988.mp3
+562:Telegram/George Michael – Last Christmas .mp3
+563:Telegram/2_5364073853855210831.mp3
+564:Telegram/Kendimden Hallice - Üzülmeye Nereden Başlasak.mp3
+565:Telegram/2_5350443036406980185.mp3
+566:Telegram/Lost-Frequencies-Calum-Scott-Where-Are-You-Now-320.mp3
+567:Telegram/coban gizi.mp3
+568:Telegram/saribulbul.mp3
+569:Telegram/Javid-Tabrizli-Ayrilik.mp3
+570:Telegram/4_5789670907769261996.mp3
+571:Telegram/Allame - Yaz Baştan.mp3
+572:Telegram/2_497223265731749032.mp3
+573:Telegram/2_5350443036406980171.m4a
+574:Telegram/2_5350443036406980167.m4a
+575:Telegram/4_5771486291115902439.mp3
+576:Telegram/2_5436385293345234374.mp3
+577:Telegram/2_5363956489578881583.mp3
+578:Telegram/2_5363956489578881584.mp3
+579:Telegram/2_5363956489578881585.mp3
+580:Telegram/2_5363956489578881586.mp3
+581:Telegram/2_5363956489578881587.mp3
+582:Telegram/2_5363956489578881588.mp3
+583:Telegram/2_5363956489578881590.mp3
+584:Telegram/-20221224-.mp3
+585:Telegram/-20230114-.mp3
+586:Telegram/-20230204-.mp3
+587:Telegram/-20230225-.mp3
+588:Telegram/p-20221210-.mp3
+589:Telegram/PARGAR- PODCAST- WK 08.mp3
+590:Telegram/NEZAKET._T_-_QAL_SENE_QURBAN.mp3
 playlist_end

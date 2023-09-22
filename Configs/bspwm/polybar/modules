@@ -49,15 +49,15 @@ click-right = toggle_eww
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0
+interface = wlan0
 interval = 3.0
 label-connected = %essid%|%netspeed%
-label-connected-font = 0
+label-connected-font = 1
 label-connected-foreground = ${colors.Yellow}
 label-connected-background = ${colors.Background}
 label-disconnected = 󰤭
 label-disconnected-foreground = ${colors.Red}
-label-disconnected-background = 4{colors.Background}
+label-disconnected-background = ${colors.Background}
 
 ramp-signal-0 = %{F#ff5555}󰤫%{F-}
 ramp-signal-1 = %{F#ff79c6}󰤟%{F-}
@@ -113,6 +113,7 @@ animation-charging-0 = 󱊤
 animation-charging-1 = 󱊥
 animation-charging-2 = 󱊦
 animation-charging-foreground = ${colors.Purple}
+animation-charging-background = ${colors.Background}
 animation-charging-framerate = 900
 
 ramp-capacity-0 = %{F#ff004b}󰂃%{F-}
@@ -127,12 +128,15 @@ ramp-capacity-8 = 󰂁
 ramp-capacity-9 = 󰂂
 ramp-capacity-10 = 󰁹 
 ramp-capacity-foreground = ${colors.Orange}
+ramp-capacity-background = ${colors.Background}
 ramp-capacity-framerate = 750
-format-charging = %{A:bspwmfloat.sh st  -e btop:}%{T2}<animation-charging>%{T-}%{A} <label-charging>
+format-charging = %{B#282a36}%{T2}<animation-charging>%{T-}<label-charging>%{B}
 
-format-discharging = %{A:bspwmfloat.sh st  -e btop:}%{T2}<ramp-capacity>%{T-}%{A} <label-discharging>
-format-background = ${colors.Background}
-
+format-discharging = %{A:bspwmfloat.sh st  -e btop:}%{T2}<ramp-capacity>%{T-}%{A}<label-discharging>
+label-charging-background = ${colors.Background}
+label-charging-foreground = ${colors.Orange}
+label-discharging-foreground = ${colors.Orange}
+label-discharging-background = ${colors.Background}
 
 
 
@@ -170,17 +174,19 @@ label-volume-background = ${colors.Background}
 label-muted = 󰖁 
 label-muted-foreground = ${colors.Red}
 label-muted-background = ${colors.Background}
-bar-volume-width = 5
+bar-volume-width = 7
 bar-volume-foreground-0 = ${colors.Orange}
 bar-volume-foreground-1 = ${colors.Yellow}
 bar-volume-foreground-2 = ${colors.Green}
 bar-volume-foreground-3 = ${colors.Blue}
 bar-volume-gradient = true
-bar-volume-indicator = "%{T3}%{F#282a36}󰣠%{T- B-}"
+bar-volume-indicator = "%{T3}%{B#282a36}%{F#bd93f9}󰣠%{T- B-}"
 bar-volume-indicator-font = 2
 bar-volume-fill = 
+bar-volume-fill-background = ${colors.Background}
 bar-volume-fill-font = 1
 bar-volume-empty = 
+bar-volume-empty-background = ${colors.Background}
 bar-volume-empty-font = 1
 bar-volume-empty-foreground = ${colors.Foreground}
 bar-volume-background-0 = ${colors.Background}
@@ -250,8 +256,11 @@ format-paused-foreground = ${colors.Red}
 format-paused-background = ${colors.Background}
 ;format-offline = <label-offline>
 format-offline-prefix = "󰋐"
-format-offline-prefix-foreground = ${colors.RED}
-label-offline = "Offline"
+format-offline-prefix-foreground = ${colors.Red}
+format-offline-prefix-background = ${colors.Background}
+label-offline = "Off "
+label-offline-foreground = ${colors.AltFore}
+label-offline-background = ${colors.Background}
 
 ; label-song =  "%title% | %artist%"
 label-song =  "%title% "
@@ -274,7 +283,7 @@ icon-next = 󰁙
 icon-next-font = 2
 icon-next-foreground = ${colors.Purple}
 
-format-offline = %{A:mpd 2> /dev/null:} <label-offline> %{T2}%{T-}%{A}
+format-offline = %{A:mpd 2> /dev/null:}%{B#282a36} <label-offline> %{T2}%{T-}%{A}%{B}
 
 format-online = %{A:bspwmfloat.sh st -e ncmpcpp:}%{T2}<label-song>%{T-}%{A}<icon-prev> <toggle> <icon-next>
 
@@ -378,28 +387,17 @@ content-font = 4
 
 
 
-;;[module/bluetooth]
-;;type = custom/script
-;;exec = ~/.config/bspwm/polybar/bluetooth-status.sh
-;;interval = 2
-;;click-left = bspwmfloat.sh blueberry
-;;click-right = exec sh ~/.config/bspwm/polybar/bluetooth-status.sh -t 
-;;format-padding = 1
-;;format-background = ${colors.BACKGROUND}
-;;format-foreground = ${colors.FOREGROUND}
-
-
 [module/bluetooth]
 type = custom/script
-exec = ~/.config/bspwm/polybar/scripts/bluetooth.sh
-interval = 1
-tail = true
-format = <label>
-format-background = ${colors.Background}
-format-foreground = ${colors.AltFore}
+exec = ~/.config/bspwm/polybar/bluetooth-status.sh
+interval = 2
+click-left = bspwmfloat.sh blueberry
+click-right = exec sh ~/.config/bspwm/polybar/bluetooth-status.sh -t 
 format-padding = 1
-label = %output%
-click-left = blctl.sh & 
+format-background = ${colors.Background}
+format-foreground = ${colors.Green}
+
+
 
 [module/filesystem]
 type = internal/fs
@@ -444,6 +442,7 @@ format-spacing = 0
 ; Default: %layout%
 label-layout = %name%
 label-layout-padding = 2
+label-layout-font = 1
 label-layout-background = ${colors.Background}
 label-layout-foreground = ${colors.Orange}
 

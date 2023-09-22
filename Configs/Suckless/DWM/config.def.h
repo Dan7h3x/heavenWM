@@ -91,7 +91,7 @@ static const int vertpadbar              = 2;   /* vertical padding for statusba
 static const char buttonbar[]            = "";
 #endif // BAR_STATUSBUTTON_PATCH
 #if BAR_SYSTRAY_PATCH
-static const unsigned int systrayspacing = 0;   /* systray spacing */
+static const unsigned int systrayspacing = -1;   /* systray spacing */
 static const int showsystray             = 1;   /* 0 means no systray */
 #endif // BAR_SYSTRAY_PATCH
 #if BAR_TAGLABELS_PATCH
@@ -586,7 +586,7 @@ static const BarRule barrules[] = {
 
 /* layout(s) */
 static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 2;    /* number of clients in master area */
+static const int nmaster     = 1;    /* number of clients in master area */
 #if FLEXTILE_DELUXE_LAYOUT
 static const int nstack      = 0;    /* number of clients in primary stack area */
 #endif // FLEXTILE_DELUXE_LAYOUT
@@ -830,7 +830,7 @@ static const char *shotarea[]  			= { "takeshot", "--area", NULL };
 
 static const char *alacritty[]      = {"alacritty",NULL};
 static const char *lockscreen[]      = {"lock.sh",NULL};
-
+static const char *dooit[]        = {"alacritty","-e","dooit",NULL};
 /* commands */
 #if !NODMENU_PATCH
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
@@ -899,6 +899,7 @@ static const Key keys[] = {
 	{Mod1Mask,			XK_F1,		spawn,			SHCMD("launcher")},
 	{Mod1Mask,			XK_f,		spawn,			SHCMD("launcherFile")},
 	{Mod1Mask,			XK_w,		spawn,			SHCMD("launcherWin")},
+	{Mod1Mask,			XK_d,		spawn,			{.v=dooit}},
 	{MODKEY,			XK_x,		spawn,			SHCMD("powermenu")},
 	{ MODKEY,             XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = alacritty } },

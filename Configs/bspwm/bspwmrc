@@ -46,6 +46,7 @@ eww daemon &
 xfce4-power-manager &
 ksuperkey -e 'Super_L=Alt_L|F1' &
 bspfloat &
+/usr/lib/xdg-desktop-portal-gtk &
 feh --no-fehbg --bg-fill -z ~/.config/Wallpaper/
 xsetroot -cursor_name left_ptr &
 setxkbmap us,ir -option 'grp:alt_shift_toggle' &
@@ -84,3 +85,4 @@ bspc rule -a 'Matplotlib' state=floating &
 bspc rule -a 'matplotlib' state=floating &
 bspc rule -a 'Python3' state=floating &
 bspc rule -a 'Figure' state=floating &
+bspc rule -a 'Pavucontrol' state=floating &

@@ -200,6 +200,7 @@ generate_window_list() {
                     duckstation-qt) w_name='󰊗' ;;
                     pcsx2-qt) w_name='󰊗' ;;
                     Fsearch) w_name='󰥩' ;;
+                    Pavucontrol) w_name='󱥮';;
                     *) w_name="$cls" ;;
 
                 esac

@@ -8,9 +8,7 @@ killall dwmblocks
 dwmblocks &
 ksuperkey -e 'Super_L=Alt_L|F1' &
 #Nice Ones
-eww daemon &
 xsetroot -cursor_name left_ptr
-xfce4-power-manager &
 
 #Apps
 picom &

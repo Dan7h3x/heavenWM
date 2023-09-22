@@ -1,0 +1,36 @@
+{
+    "bibitems": [
+    ],
+    "bibtexfiles": [
+    ],
+    "childdocs": [
+        "/run/media/mahdi/FLASH/Works/Interval/chapter1.tex",
+        "/run/media/mahdi/FLASH/Works/Interval/dicen2fa.tex",
+        "/run/media/mahdi/FLASH/Works/Interval/dicfa2en.tex",
+        "/run/media/mahdi/FLASH/Works/Interval/commands.tex",
+        "/run/media/mahdi/FLASH/Works/Interval/introduction.tex",
+        "/run/media/mahdi/FLASH/Works/Interval/en_title.tex",
+        "/run/media/mahdi/FLASH/Works/Interval/references.tex"
+    ],
+    "filename": "/run/media/mahdi/FLASH/Works/Interval/main-file.tex",
+    "labels": [
+        "LastPage"
+    ],
+    "modified": "Sun Sep 10 08:09:58 2023",
+    "packages": [
+        "a4paper,12pt,openany,oneside, pmsc#VThesis"
+    ],
+    "refs": [
+    ],
+    "toc": [
+        "-1#commands#26",
+        "-1#introduction#37",
+        "-1#chapter1#42",
+        "-1#dicfa2en#55",
+        "-1#dicen2fa#56",
+        "-1#references#57",
+        "-1#en_title#61"
+    ],
+    "usercommands": [
+    ]
+}

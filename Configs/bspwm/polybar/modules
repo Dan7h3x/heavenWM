@@ -49,7 +49,7 @@ click-right = toggle_eww
 
 [module/wlan]
 type = internal/network
-interface = wlan0
+interface = wlp2s0
 interval = 3.0
 label-connected = %essid%|%netspeed%
 label-connected-font = 1
@@ -391,7 +391,7 @@ content-font = 4
 type = custom/script
 exec = ~/.config/bspwm/polybar/bluetooth-status.sh
 interval = 2
-click-left = bspwmfloat.sh blueberry
+click-left = blctl.sh
 click-right = exec sh ~/.config/bspwm/polybar/bluetooth-status.sh -t 
 format-padding = 1
 format-background = ${colors.Background}
@@ -503,3 +503,19 @@ label-indicator-off-numlock =
 label-indicator-on-scrolllock = 
 label-indicator-off-scrolllock =
 
+
+[module/pomodoro]
+type = custom/script
+
+exec = ~/.config/bspwm/polybar/pomodoro.py
+tail = true
+
+label = %output%
+label-background = ${colors.Background}
+label-foreground = ${colors.Foreground}
+
+click-left = ~/.config/bspwm/polybar/pomodoro.py toggle
+click-right = ~/.config/bspwm/polybar/pomodoro.py end
+click-middle = ~/.config/bspwm/polybar/pomodoro.py lock
+scroll-up = ~/.config/bspwm/polybar/pomodoro.py time +60 
+scroll-down = ~/.config/bspwm/polybar/pomodoro.py time -60

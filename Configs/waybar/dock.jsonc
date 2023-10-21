@@ -1,0 +1,17 @@
+{
+  "position": "left",
+  "modules-center": [
+    "wlr/taskbar"
+  ],
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 16,
+    "icon-theme": "Beautyline",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "on-click-right": "maximize",
+    "app_ids-mapping": {
+      "Browser": "chromium"
+    }
+  }
+}

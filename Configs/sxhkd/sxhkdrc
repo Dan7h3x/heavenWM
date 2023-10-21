@@ -1,12 +1,12 @@
 
 super + Return
-	st  
+	alacritty  
 
 super + shift + Return
-  bspwmfloat.sh st 
+  bspwmfloat.sh alacritty
 
 super + t
-  bspwmfull.sh st -o window.startup_mode=fullscreen window.opacity=0.9 font.size=14
+  bspwmfull.sh alacritty -o window.startup_mode=fullscreen window.opacity=0.79 font.size=10
 alt + F1
     launcher
 super + w
@@ -25,7 +25,11 @@ super + o
 super + s 
     bspwmfloat.sh st
 
+super + r
+  RofiRadio.sh
 
+super + b
+  blctl.sh
 # Lockscreen
 ctrl + alt + l
     lock.sh

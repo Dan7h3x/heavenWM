@@ -2,11 +2,11 @@
 
 
 # icons
-iDIR='/home/mahdi/.config/dunst/icons/dunst'
+iDIR='/home/mehdi/.config/dunst/icons/dunst'
 
 # Get Volume
 get_volume() {
-	volume=`amixer get Master | tail -n1 | awk -F ' ' '{print $5}' | tr -d '[]'`
+	volume=`pamixer --get-volume`
 	echo "$volume"
 }
 
@@ -32,21 +32,21 @@ notify_vol() {
 
 # Increase Volume
 inc_volume() {
-	amixer -Mq set Master 5%+ unmute && notify_vol
+	pamixer -i 5 && notify_vol
 }
 
 # Decrease Volume
 dec_volume() {
-	amixer -Mq set Master 5%- unmute && notify_vol
+	pamixer -d 5 && notify_vol
 }
 
 # Toggle Mute
 toggle_mute() {
-	amixer get Master | grep '\[on\]' &>/dev/null
+	amixer --get-volume | grep '\[on\]' &>/dev/null
 	if [[ "$?" == 0 ]]; then
-		amixer set Master toggle && dunstify -u low --replace=69 -i "$iDIR/volume-mute.png" "Mute"
+		pamixer -t && dunstify -u low --replace=69 -i "$iDIR/volume-mute.png" "Mute"
 	else
-		amixer set Master toggle && get_icon && dunstify -u low --replace=69 -i "$icon" "Unmute"
+		pamixer -t && get_icon && dunstify -u low --replace=69 -i "$icon" "Unmute"
 	fi
 }
 

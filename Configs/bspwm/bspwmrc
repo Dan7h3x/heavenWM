@@ -9,7 +9,6 @@
 #   ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝   #
 ##################### By: Dan7h3x ####################
 
-
 export PATH="${PATH}:${HOME}/.config/bspwm/bin"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
@@ -17,11 +16,11 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 killall -99 polybar
 
 if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then
-    bspc monitor HDMI-A-0 -d I II III IV V VI VII IIX IX X
-    polybar --config=~/.config/bspwm/polybar/config.ini --reload example2 &
+	bspc monitor HDMI-A-0 -d I II III IV V VI VII IIX IX X
+	polybar --config=~/.config/bspwm/polybar/config.ini --reload example2 &
 else
-    bspc monitor eDP -d I II III IV V VI VII IIX IX X
-    polybar --config=~/.config/bspwm/polybar/config.ini --reload example &
+	bspc monitor eDP -d I II III IV V VI VII IIX IX X
+	polybar --config=~/.config/bspwm/polybar/config.ini --reload example &
 fi
 
 # ##############################################################################
@@ -37,7 +36,7 @@ config() { bspc config "$@" & }
 # ##############################################################################
 
 # Run keybindings daemon.
-pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x sxhkd >/dev/null || sxhkd &
 mpd &
 dunst --config $HOME/.config/dunst/dunstrc &
 picom &
@@ -46,7 +45,6 @@ eww daemon &
 xfce4-power-manager &
 ksuperkey -e 'Super_L=Alt_L|F1' &
 bspfloat &
-/usr/lib/xdg-desktop-portal-gtk &
 feh --no-fehbg --bg-fill -z ~/.config/Wallpaper/
 xsetroot -cursor_name left_ptr &
 setxkbmap us,ir -option 'grp:alt_shift_toggle' &
@@ -54,11 +52,9 @@ setxkbmap us,ir -option 'grp:alt_shift_toggle' &
 # #                                 WINDOW RULES                               #
 # ##############################################################################
 
-
 # ##############################################################################
 # #                            GENERAL CONFIGURATION                           #
 # ##############################################################################
-
 
 config top_padding 28
 config border_width 2
@@ -86,3 +82,5 @@ bspc rule -a 'matplotlib' state=floating &
 bspc rule -a 'Python3' state=floating &
 bspc rule -a 'Figure' state=floating &
 bspc rule -a 'Pavucontrol' state=floating &
+bspc rule -a 'Windscribe2' state=floating &
+bspc rule -a Zathura state=tiled &

@@ -36,8 +36,8 @@ alt = "mod1"
 # Scripts/Apps Variables
 home = os.path.expanduser("~")
 terminal = "alacritty"
+terminalfloat = "st"
 music_player = "termmusic"
-color_picker = home + "/.config/qtile/scripts/qtile_colorpicker"
 brightness = "brightness"
 volume = "volume"
 screenshot = "takeshot"
@@ -130,15 +130,10 @@ keys = [
     Key(
         [mod, "shift"],
         "Return",
-        lazy.spawn(terminal + "--float"),
+        lazy.spawn(terminalfloat),
         desc="Launch floating terminal with qtile configs",
     ),
-    Key(
-        [mod, "mod1"],
-        "Return",
-        lazy.spawn(terminal + " --full"),
-        desc="Launch fullscreen terminal with qtile configs",
-    ),
+  
     # GUI Apps --
     Key([mod, "shift"], "f", lazy.spawn(file_manager), desc="Launch file manager"),
     Key([mod, "shift"], "e", lazy.spawn(text_editor), desc="Launch text editor"),
@@ -147,25 +142,25 @@ keys = [
     Key(
         ["control", "mod1"],
         "v",
-        lazy.spawn(terminal + " -e nvim"),
+        lazy.spawn(terminalfloat + " -e nvim"),
         desc="Open vim in qtile's terminal",
     ),
     Key(
         ["control", "mod1"],
         "r",
-        lazy.spawn(terminal + " -e ranger"),
+        lazy.spawn(terminalfloat + " -e ranger"),
         desc="Open ranger in qtile's terminal",
     ),
     Key(
         ["control", "mod1"],
         "h",
-        lazy.spawn(terminal + " -e btop"),
+        lazy.spawn(terminalfloat + " -e btop"),
         desc="Open htop in qtile's terminal",
     ),
     Key(
         ["control", "mod1"],
         "m",
-        lazy.spawn(terminal + "-e ncmpcpp"),
+        lazy.spawn(terminalfloat + " -e ncmpcpp"),
         desc="Open ncmpcpp in qtile's terminal",
     ),
     # Rofi Applets --
@@ -246,11 +241,13 @@ keys = [
         desc="Take Screenshot of selected area",
     ),
     # Misc --
-    Key([mod], "p", lazy.spawn(color_picker), desc="Run colorpicker"),
+    Key([mod], "p", lazy.spawn("toggle_eww"), desc="Run colorpicker"),
+    Key([mod], "m", lazy.spawn("toggle_music"), desc="Run colorpicker"),
+    # Key([mod], "p", lazy.spawn("toggle_eww"), desc="Run colorpicker"),
     Key(
         ["mod1", "control"],
         "l",
-        lazy.spawn("betterlockscreen --lock"),
+        lazy.spawn("lock.sh"),
         desc="Run lockscreen",
     ),
     # WM Specific --
@@ -495,8 +492,8 @@ layouts = [
         border_on_single=False,
         border_width=var_border_width,
         fair=True,
-        grow_amount=10,
-        lower_right=True,
+        grow_amount=1,
+        lower_right=False,
         margin=var_margin,
         margin_on_single=None,
         ratio=1.5,
@@ -656,7 +653,7 @@ layouts = [
         padding_left=10,
         padding_x=10,
         padding_y=10,
-        panel_width=200,
+        panel_width=100,
         place_right=False,
         previous_on_rm=False,
         section_bottom=0,
@@ -691,7 +688,7 @@ layouts = [
         border_normal=var_normal_color,
         border_width=var_border_width,
         fullscreen_border_width=0,
-        max_border_width=0,
+        max_border_width=2,
     ),
 ]
 
@@ -710,11 +707,11 @@ def search():
 
 
 def ranger():
-    qtile.cmd_spawn("alacritty -e ranger")
+    qtile.cmd_spawn(terminalfloat +" -e ranger")
 
 
 def pacseek():
-    qtile.cmd_spawn("alacritty -e pacseek")
+    qtile.cmd_spawn(terminalfloat +" -e pacseek")
 
 
 def nmtui():
@@ -728,6 +725,8 @@ def cal():
 def dash():
     qtile.cmd_spawn("toggle_eww")
 
+def update():
+    qtile.cmd_spawn(terminalfloat + " -e yay")
 
 screens = [
     Screen(
@@ -757,6 +756,7 @@ screens = [
                     background=None,
                 ),
                 widget.GroupBox(
+                    font = "JetBrains Mono Bold",
                     fontsize=12,
                     borderwidth=1,
                     highlight_method="block",
@@ -871,8 +871,9 @@ screens = [
                     font="JetBrains Mono Bold",
                     fontsize=13,
                     max_chars=24,
-                    play_states={"pause": "󱖐 ", "play": "󰐌 ", "stop": "󰏥 "},
                     status_format="{artist:10s}*{title}",
+                    scroll = True,
+                    width = 300,
                 ),
                 widget.Image(
                     filename="~/.config/qtile/Icons/navigation-menu-vertical.png",
@@ -887,6 +888,40 @@ screens = [
                     icon_size=25,
                     padding=8,
                 ),
+                widget.Image(
+                    filename = "~/.config/qtile/Icons/ghost.png",
+                    background = "#fffffa",
+                    margin = 2,
+                ),
+                widget.CheckUpdates(
+                    background = "#fffffa",
+                    foreground = "#000000",
+                    colour_have_updates = "#000000",
+                    colour_no_updates = "#000000",
+                    font = "JetBrains Mono Bold",
+                    distro = "Arch_yay",
+                    display_format = 'Ups: {updates}',
+                    fmt = "{}",
+                    initial_text = "-",
+                    no_update_string = 'Up2Date',
+                    mouse_callbacks = {"Button1": update},
+                    fontsize = 13,
+                ),
+                widget.Image(
+                    filename = "~/.config/qtile/Icons/weather.png",
+                    background = "#fffffa",
+                    margin = 2,
+                ),
+                widget.Wttr(
+                    background = "#fffffa",
+                    foreground = "#000000",
+                    location = {'Tehran':'Home'},
+                    format = "%t(%f)",
+                    font = "JetBrains Mono Bold",
+                    fontsize = 13,
+                ),
+         
+
                 widget.Spacer(
                     length=4,  # widget.Image(
                     background="#fffffa",  # filename='~/.config/qtile/Assets/Drop1.png',
@@ -900,9 +935,9 @@ screens = [
                     background="#fffffa",
                     interface="wlp2s0",
                     format="{essid} {percent:2.0%}",
-                    disconnected_message="",
+                    disconnected_message="Off",
                     foreground="#000000",
-                    font="JetBrainsMono Nerd Font",
+                    font="JetBrains Mono Bold",
                     fontsize=13,
                     scroll=True,
                     scroll_repeat=True,
@@ -953,18 +988,20 @@ screens = [
                     format="{percent:2.0%}",
                     fontsize=13,
                 ),
-                # widget.Battery(format=' {percent:2.0%}',
-                # font="JetBrains Mono ExtraBold",
-                # fontsize=12,
-                # padding=10,
-                # background='#000000',
-                # ),
-                # widget.Memory(format='﬙{MemUsed: .0f}{mm}',
-                # font="JetBrains Mono Bold",
-                # fontsize=12,
-                # padding=10,
-                # background='#4B4D66',
-                # ),
+                widget.Image(
+                    filename = "~/.config/qtile/Icons/brightness.png",
+                    background = "fffffa",
+                ),
+                widget.Backlight(
+                    background = "#fffffa",
+                    foreground = "#000000",
+                    backlight_name = "amdgpu_bl1",
+                    change_command = "brightness",
+                    fmt ='{}',
+                    font = "JetBrains Mono Bold",
+                    format = "{percent:2.0%}",
+                ),
+            
                 widget.Volume(
                     font="JetBrainsMono Nerd Font",
                     theme_path="~/.config/qtile/Icons/Volume/",
@@ -1023,7 +1060,7 @@ bring_front_click = False
 
 # If true, the cursor follows the focus as directed by the keyboard, warping to the center of the focused window.
 # When switching focus between screens, If there are no windows in the screen, the cursor will warp to the center of the screen.
-cursor_warp = False
+cursor_warp = True
 
 # A function which generates group binding hotkeys. It takes a single argument, the DGroups object, and can use that to set up dynamic key bindings.
 # A sample implementation is available in 'libqtile/dgroups.py' called `simple_key_binder()`, which will bind groups to "mod+shift+0-10" by default.
@@ -1031,6 +1068,8 @@ dgroups_key_binder = None
 
 # A list of Rule objects which can send windows to various groups based on matching criteria.
 dgroups_app_rules = []  # type: list
+
+
 
 # The default floating layout to use. This allows you to set custom floating rules among other things if you wish.
 floating_layout = layout.Floating(
@@ -1052,6 +1091,7 @@ floating_layout = layout.Floating(
         Match(wm_class="Bluetooth|bluetooth"),
         Match(wm_class="Windscribe2"),
         Match(wm_class="MATLAB R2018b|matlab r2018b"),
+        Match(wm_class="Blueman-manager"),
     ],
 )
 
@@ -1090,7 +1130,5 @@ auto_minimize = False
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
-# wmname = "LG3D"
+wmname = "LG3D"
 
-# When using the Wayland backend, this can be used to configure input devices.
-wl_input_rules = None

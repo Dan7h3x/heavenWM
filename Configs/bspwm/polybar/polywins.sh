@@ -175,7 +175,7 @@ generate_window_list() {
 			Alacritty) w_name='󰲇' ;;
 			St) w_name='󰲇' ;;
 			Browser) w_name='󰈹' ;;
-			Thorium-browser) w_name='󰊯' ;;
+			Chromium) w_name='󰊯' ;;
 			TelegramDesktop) w_name='󰗍' ;;
 			Pcmanfm) w_name='󰚝' ;;
 			Thunar) w_name='󰚝' ;;

@@ -39,7 +39,7 @@ config() { bspc config "$@" & }
 pgrep -x sxhkd >/dev/null || sxhkd &
 mpd &
 dunst --config $HOME/.config/dunst/dunstrc &
-picom &
+compfy &
 eww daemon &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 xfce4-power-manager &
@@ -83,4 +83,5 @@ bspc rule -a 'Python3' state=floating &
 bspc rule -a 'Figure' state=floating &
 bspc rule -a 'Pavucontrol' state=floating &
 bspc rule -a 'Windscribe2' state=floating &
+bspc rule -a 'Blueman-manager' state=floating &
 bspc rule -a Zathura state=tiled &

@@ -55,10 +55,10 @@ listview {
 	lines:			0;
 	fixed-height: 	true;
 	border: 		0;
-	scrollbar: 		false;
+	scrollbar: 		true;
 	text-color:		@separatorcolor;
-  columns: 2;
-  lines: 15;
+  columns: 1;
+  lines: 8;
 }
 element {
 	border:			0;

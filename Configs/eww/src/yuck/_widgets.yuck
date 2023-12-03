@@ -156,9 +156,9 @@
 		 	:space-evenly "false"
 			:halign "center"
 			:spacing 35
-			(button :class "btn_prev" :onclick "~/.config/eww/scripts/music previous" "ﭣ")
-			(button :class "btn_play" :onclick "~/.config/eww/scripts/music toggle" playpause)
-			(button :class "btn_next" :onclick "~/.config/eww/scripts/music next" "ﭡ"))
+			(button :class "btn_prev" :onclick "mpc prev" "ﭣ")
+			(button :class "btn_play" :onclick "mpc toggle" playpause)
+			(button :class "btn_next" :onclick "mpc next" "ﭡ"))
 	(box    :orientation "h"
 			:class "metric-player"
 			:space-evenly "false"
@@ -366,3 +366,43 @@
     "scripts/calendar")
 (defpoll calendar_year :interval "10h"
     "date '+%Y'")
+
+
+
+(defwidget mus [] 
+	(box 	:class "music-player"
+			:orientation "v" 
+		 	:space-evenly "false"  
+		 	:halign "center"
+	(box 	:class "album_art" 
+		 	:style "background-image: url('${art}');")
+	(box 	:orientation "v" 
+		 	:space-evenly "false"
+		 	:halign "center"
+		 	:spacing 10 
+	(label  :class "artist"
+		 	:limit-width 19
+		 	:text artist)
+ 	(label  :class "song"
+		 	:limit-width 20
+		 	:text title) 
+	(box 	:orientation "h"  
+		 	:space-evenly "false"
+			:halign "center"
+			:spacing 35
+			(button :class "btn_prev" :onclick "mpc prev" "ﭣ")
+			(button :class "btn_play" :onclick "mpc toggle" playpause)
+			(button :class "btn_next" :onclick "mpc next" "ﭡ"))
+	(box    :orientation "h"
+			:class "metric-player"
+			:space-evenly "false"
+			(scale  :min 0
+					:max 101
+					:active "false"
+					:value {songtime != "" ? "${songtime}" : "0"}
+				)       
+			)	
+		)
+	)
+)
+

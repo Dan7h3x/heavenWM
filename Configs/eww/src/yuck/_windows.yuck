@@ -20,3 +20,15 @@
                         :width "270px" 
                         :height "60px")
 (cal))
+
+
+(defwindow mus
+  :monitor 0
+  :geometry (geometry :x "1630px"
+                      :y "59%"
+    :width "270px"
+    :height "60px")
+  :stacking "fg"
+  :wm-ignore true
+  :windowtype "toolbar"
+(mus))

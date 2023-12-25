@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if [[ $(wlr-randr | grep "HDMI") ]]; then
-	wlr-randr --output eDP-1 --off wlr-randr --output HDMI-A-1 --on --preferred
-else
-	wlr-randr --output eDP-1 --on --preferred
-fi

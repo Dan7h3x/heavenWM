@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-echo "^c#94af7d^  $(pacman -Q | wc -l)"

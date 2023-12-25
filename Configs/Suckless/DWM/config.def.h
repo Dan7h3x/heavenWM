@@ -88,7 +88,7 @@ static const int horizpadbar             = 4;   /* horizontal padding for status
 static const int vertpadbar              = 2;   /* vertical padding for statusbar */
 #endif // BAR_STATUSPADDING_PATCH
 #if BAR_STATUSBUTTON_PATCH
-static const char buttonbar[]            = "";
+static const char buttonbar[]            = "";
 #endif // BAR_STATUSBUTTON_PATCH
 #if BAR_SYSTRAY_PATCH
 static const unsigned int systrayspacing = -1;   /* systray spacing */
@@ -459,8 +459,13 @@ static const Rule rules[] = {
 	RULE(.class = "python3", .isfloating = 1)
 	RULE(.class = "Matplotlib", .isfloating = 1)
 	RULE(.class = "matplotlib", .isfloating = 1)
+RULE(.class = "Python3", .isfloating = 1)
+RULE(.class = "Figure", .isfloating = 1)
 	RULE(.class = "Lxappearance", .isfloating = 1)
 	RULE(.class = "TelegramDesktop", .isfloating = 1)
+RULE(.class = "Pavucontrol", .isfloating = 1)
+RULE(.class = "Blueman-manager", .isfloating = 1)
+RULE(.class = "Windscribe2", .isfloating = 1)
 	#if RENAMED_SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .scratchkey = 's', .isfloating = 1)
 	#elif SCRATCHPADS_PATCH
@@ -819,7 +824,6 @@ static const char *upvol[]   			= { "volume", "--inc",  	NULL };
 static const char *downvol[] 			= { "volume", "--dec",    	NULL };
 static const char *upbl[] 			= { "brightness", "--inc",    NULL };
 static const char *downbl[] 			= { "brightness", "--dec",  NULL };
-static const char *tasks [] 			= { "Todos",  NULL };
 
 /* Screenshot */
 static const char *shotnow[]  			= { "takeshot", "--now", NULL };
@@ -831,6 +835,7 @@ static const char *shotarea[]  			= { "takeshot", "--area", NULL };
 static const char *alacritty[]      = {"alacritty",NULL};
 static const char *lockscreen[]      = {"lock.sh",NULL};
 static const char *dooit[]        = {"alacritty","-e","dooit",NULL};
+static const char *keybs[]          = {"keys.sh",NULL};
 /* commands */
 #if !NODMENU_PATCH
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
@@ -901,6 +906,7 @@ static const Key keys[] = {
 	{Mod1Mask,			XK_w,		spawn,			SHCMD("launcherWin")},
 	{Mod1Mask,			XK_d,		spawn,			{.v=dooit}},
 	{MODKEY,			XK_x,		spawn,			SHCMD("powermenu")},
+  {MODKEY,      XK_k, spawn, {.v=keybs}},
 	{ MODKEY,             XK_Return,     spawn,                  {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = alacritty } },
 { ControlMask|Mod1Mask,             XK_l,     spawn,                  {.v = lockscreen } },
@@ -1088,7 +1094,6 @@ static const Key keys[] = {
 	#endif // FLEXTILE_DELUXE_LAYOUT
 	{ MODKEY,                       XK_space,      togglefloating,              {0} },
 	{ MODKEY|ShiftMask,             XK_space,      setlayout,         {0} },
-	{ MODKEY|ShiftMask,             XK_t,      spawn,         {.v = tasks} },
 	#if MAXIMIZE_PATCH
 	{ MODKEY|ControlMask|ShiftMask, XK_h,          togglehorizontalmax,    {0} },
 	{ MODKEY|ControlMask|ShiftMask, XK_l,          togglehorizontalmax,    {0} },

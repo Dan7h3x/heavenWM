@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-echo "^c#61afef^ ^c#61afef^$(volume --get)"

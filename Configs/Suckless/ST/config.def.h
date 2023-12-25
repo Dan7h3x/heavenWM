@@ -115,72 +115,48 @@ unsigned int tabspaces = 4;
 
 /* bg opacity */
 float alpha = 0.80;
+
+/* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-    "#262335",
-    "#fe4450",
-    "#72f1b8",
-    "#fede5d",
-    "#03edf9",
-    "#ff7edb",
-    "#ebbcba",
-    "#ffffff",
-    "#6e6a86",
-    "#fe4450",
-    "#72d1b8",
-    "#f3e70f",
-    "#03edf9",
-    "#ff7edb",
-    "#ebbcba",
-    "#ffffff",
-    [255] = 0,
-    /* more colors can be added after 255 to use with DefaultXX */
-    [256] = "#191724",
+	/* 8 normal colors */
+	"#06080a",
+	"#ee6d85",
+	"#95c561",
+	"#d7a65f",
+	"#7199ee",
+	"#a485dd",
+	"#38a89d",
+	"gray90",
+
+	/* 8 bright colors */
+	"#212234",
+	"#ee6d85",
+	"#95c561",
+	"#d7a65f",
+	"#7199ee",
+	"#a485dd",
+	"#38a89d",
+	"white",
+
+	[255] = 0,
+
+	/* more colors can be added after 255 to use with DefaultXX */
+	"#add8e6", /* 256 -> cursor */
+	"#555555", /* 257 -> rev cursor*/
+	"#000000", /* 258 -> bg */
+	"#e5e5e5", /* 259 -> fg */
 };
+
 
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultbg = 256;
-unsigned int defaultfg = 7;
-unsigned int defaultcs = 7;
-unsigned int defaultrcs = 7;
-/* Terminal colors (16 first used in escape sequence) */
-// static const char *colorname[] = {
-//     "#26233a",
-//     "#eb6f92",
-//     "#9ccfd8",
-//     "#f6c177",
-//     "#31748f",
-//     "#c4a7e7",
-//     "#ebbcba",
-//     "#e0def4",
-//     "#6e6a86",
-//     "#eb6f92",
-//     "#9ccfd8",
-//     "#f6c177",
-//     "#31748f",
-//     "#c4a7e7",
-//     "#ebbcba",
-//     "#e0def4",
-//     [255] = 0,
-//     /* more colors can be added after 255 to use with DefaultXX */
-//     [256] = "#191724",
-// };
-//
-//
-// /*
-//  * Default colors (colorname index)
-//  * foreground, background, cursor, reverse cursor
-//  */
-// unsigned int defaultbg = 256;
-// unsigned int defaultfg = 7;
-// unsigned int defaultcs = 7;
-// unsigned int defaultrcs = 7;
-//
-//
-/*
+unsigned int defaultbg = 258;
+unsigned int defaultfg = 259;
+unsigned int defaultcs = 256;
+unsigned int defaultrcs = 257;
  * https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-q.1D81
  * Default style of cursor
  * 0: Blinking block
@@ -193,7 +169,7 @@ unsigned int defaultrcs = 7;
  * 7: Blinking st cursor
  * 8: Steady st cursor
  */
-static unsigned int cursorshape = 1;
+static unsigned int cursorshape = 5;
 
 /*
  * Default columns and rows numbers

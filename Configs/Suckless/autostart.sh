@@ -12,6 +12,6 @@ xsetroot -cursor_name left_ptr
 eww daemon &
 #Apps
 compfy &
-feh --bg-fill -z ~/.config/Wallpaper/Sonic.jpg &
+feh --bg-fill -z ~/.config/Wallpaper/ &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 setxkbmap us,ir -option 'grp:alt_shift_toggle' &

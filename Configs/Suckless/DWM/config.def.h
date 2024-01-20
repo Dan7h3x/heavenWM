@@ -5,7 +5,7 @@
 static const unsigned int borderpx       = 1;   /* border pixel of windows */
 static const int corner_radius           = 5;
 #else
-static const unsigned int borderpx       = 1;   /* border pixel of windows */
+static const unsigned int borderpx       = 2;   /* border pixel of windows */
 #endif // ROUNDED_CORNERS_PATCH
 static const unsigned int snap           = 16;  /* snap pixel */
 #if SWALLOW_PATCH
@@ -156,9 +156,9 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = { "JetBrainsMono Nerd Font:size=13" };
 #else
-static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=13" };
+static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=14" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "Iosevka Term:size=12";
+static const char dmenufont[]            = "FantasqueSansMono Nerd Font:size=14";
 #include "themes/tokyo.h"
 // static char urgfloatcolor[]              = "#db8fd9";
 
@@ -355,7 +355,7 @@ static const char *layoutmenu_cmd = "layout.sh";
 
 #if COOL_AUTOSTART_PATCH
 static const char *const autostart[] = {
-	"alacritty","-e","dooit",NULL,
+	"kitty","-e","dooit",NULL,
   NULL
 };
 #endif // COOL_AUTOSTART_PATCH
@@ -455,17 +455,17 @@ static const Rule rules[] = {
 	RULE(.class = "Matlab", .isfloating = 1)
   RULE(.class = "sun-awt-X11-XFramePeer", .isfloating = 1)
 
-	RULE(.class = "Alacritty", .isfloating = 1)
+	RULE(.class = "kitty", .isfloating = 1)
 	RULE(.class = "python3", .isfloating = 1)
 	RULE(.class = "Matplotlib", .isfloating = 1)
 	RULE(.class = "matplotlib", .isfloating = 1)
-RULE(.class = "Python3", .isfloating = 1)
-RULE(.class = "Figure", .isfloating = 1)
+  RULE(.class = "Python3", .isfloating = 1)
+  RULE(.class = "Figure", .isfloating = 1)
 	RULE(.class = "Lxappearance", .isfloating = 1)
 	RULE(.class = "TelegramDesktop", .isfloating = 1)
-RULE(.class = "Pavucontrol", .isfloating = 1)
-RULE(.class = "Blueman-manager", .isfloating = 1)
-RULE(.class = "Windscribe2", .isfloating = 1)
+  RULE(.class = "Pavucontrol", .isfloating = 1)
+  RULE(.class = "Blueman-manager", .isfloating = 1)
+  RULE(.class = "Windscribe2", .isfloating = 1)
 	#if RENAMED_SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .scratchkey = 's', .isfloating = 1)
 	#elif SCRATCHPADS_PATCH
@@ -833,8 +833,9 @@ static const char *shotwin[]  			= { "takeshot", "--win", NULL };
 static const char *shotarea[]  			= { "takeshot", "--area", NULL };
 
 static const char *alacritty[]      = {"alacritty",NULL};
+static const char *kitty[]          = {"kitty",NULL};
 static const char *lockscreen[]      = {"lock.sh",NULL};
-static const char *dooit[]        = {"alacritty","-e","dooit",NULL};
+static const char *dooit[]        = {"kitty","-e","dooit",NULL};
 static const char *keybs[]          = {"keys.sh",NULL};
 /* commands */
 #if !NODMENU_PATCH
@@ -907,8 +908,8 @@ static const Key keys[] = {
 	{Mod1Mask,			XK_d,		spawn,			{.v=dooit}},
 	{MODKEY,			XK_x,		spawn,			SHCMD("powermenu")},
   {MODKEY,      XK_k, spawn, {.v=keybs}},
-	{ MODKEY,             XK_Return,     spawn,                  {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = alacritty } },
+	{ MODKEY,             XK_Return,     spawn,                  {.v = alacritty } },
+	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = kitty } },
 { ControlMask|Mod1Mask,             XK_l,     spawn,                  {.v = lockscreen } },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },

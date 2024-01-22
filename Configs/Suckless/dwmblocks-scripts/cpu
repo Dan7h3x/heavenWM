@@ -1,2 +1,14 @@
 #!/usr/bin/env bash
-echo "^c#fdf6e3^ ^c#fdf6e3^$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}')"
+
+red="#FF3131"
+purple="#9457EB"
+green="#39FF14"
+blue="#4D4DFF"
+bblue="#89CFF0"
+orange="#F6890A"
+yellow="#CCFF00"
+cyan="#00FEFC"
+teal="#43BBB6"
+black="#000000"
+grey="#B0B6B6"
+echo "^b$black^^c$teal^=^d^^b$teal^^c$black^$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}')^d^"

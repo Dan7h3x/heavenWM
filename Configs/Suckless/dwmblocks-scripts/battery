@@ -3,15 +3,25 @@
 SC='/usr/local/bin/dwmblocks-scripts/batteryH'
 IC=$(sh $SC --icon)
 FG=$(sh $SC --fg)
-BG=$(sh $SC --bg)
+red="#FF3131"
+purple="#9457EB"
+green="#39FF14"
+blue="#4D4DFF"
+bblue="#89CFF0"
+orange="#F6890A"
+yellow="#CCFF00"
+cyan="#00FEFC"
+teal="#43BBB6"
+black="#000000"
+grey="#A0B6C6"
 
 if [[ ! $(acpi -b | grep -i battery) ]]; then
 	exit 0
 else
 	if [[ ! $(acpi -a|grep -i adapter|grep -i on-line) ]]; then
-		printf "^c$BG^$IC^c$FG^"
+		printf "^b$black^^c$FG^$IC=^d^"
 	else
-		printf "^c$BG^$IC^c$FG^"
+		printf "^b$black^^c$FG^$IC=^d^"
 	fi
-	echo "$(acpi | sed "s/,//g" | awk '{print $4}' | tr -d "\n")"
+	echo "^b$FG^^c$black^$(acpi | sed "s/,//g" | awk '{print $4}' | tr -d "\n")^d^"
 fi

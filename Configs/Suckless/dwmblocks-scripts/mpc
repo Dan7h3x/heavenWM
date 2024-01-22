@@ -1,19 +1,29 @@
 #!/bin/bash
 
-online=$(timeout 2 mpc 2> /dev/null)
+red="#FF3131"
+purple="#9457EB"
+green="#39FF14"
+blue="#4D4DFF"
+bblue="#89CFF0"
+orange="#F6890A"
+yellow="#CCFF00"
+cyan="#00FEFC"
+teal="#43BBB6"
+black="#000000"
+grey="#B0B6B6"
+online=$(timeout 2 mpc 2>/dev/null)
 
 if [ ! "$online" = "" ]; then
-  title=$(mpc -f "%title%" 2> /dev/null | head -n 1)
-  artist=$(mpc -f "%artist%" 2> /dev/null | head -n 1)
-  if [ "$(echo "$online" | wc -l)" -le 1 ]; then
-    echo -n "^c#a48ead^^d^"
-  else
-    echo -n "^c#a48ead^^d^ ${title:0:10}-${artist:0:10}"
-  fi
+	title=$(mpc -f "%title%" 2>/dev/null | head -n 1)
+	artist=$(mpc -f "%artist%" 2>/dev/null | head -n 1)
+	if [ "$(echo "$online" | wc -l)" -le 1 ]; then
+		echo -n "^c$blue^^d^"
+	else
+		echo -n "^b$black^^c$blue^=^d^^b$blue^^c$black^${title:0:10}-${artist:0:10}^d^ "
+	fi
 else
-  echo -n "^c#a48ead^ﳌ ^d^"
+	echo -n "^b$black^^c$red^ﳌ=^d^^b$red^^c$black^Off^d^ "
 fi
 case $BLOCK_BUTTON in
-          1) setsid -f st -e ncmpcpp;;
+1) setsid -f st -e ncmpcpp ;;
 esac
-

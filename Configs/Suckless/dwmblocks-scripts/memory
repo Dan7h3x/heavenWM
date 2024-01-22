@@ -1,2 +1,15 @@
 #!/usr/bin/env bash
-echo "^c#7797b7^ ^c#7797b7^$(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
+
+red="#FF3131"
+purple="#9457EB"
+green="#39FF14"
+blue="#4D4DFF"
+bblue="#89CFF0"
+orange="#F6890A"
+yellow="#CCFF00"
+cyan="#00FEFC"
+teal="#43BBB6"
+black="#000000"
+grey="#B0B6B6"
+
+echo "^b$black^^c$orange^=^d^^b$orange^^c$black^$(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)^d^"

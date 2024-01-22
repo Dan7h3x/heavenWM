@@ -907,7 +907,7 @@ static const Key keys[] = {
 	{Mod1Mask,			XK_w,		spawn,			SHCMD("launcherWin")},
 	{Mod1Mask,			XK_d,		spawn,			{.v=dooit}},
 	{MODKEY,			XK_x,		spawn,			SHCMD("powermenu")},
-  {MODKEY,      XK_k, spawn, {.v=keybs}},
+  {Mod1Mask,      XK_k, spawn, {.v=keybs}},
 	{ MODKEY,             XK_Return,     spawn,                  {.v = alacritty } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = kitty } },
 { ControlMask|Mod1Mask,             XK_l,     spawn,                  {.v = lockscreen } },

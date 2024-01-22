@@ -1,3 +1,13 @@
 #!/usr/bin/env bash
-
-echo "^c#61afef^ ^c#61afef^$(volume --get)"
+red="#FF3131"
+purple="#9457EB"
+green="#39FF14"
+blue="#4D4DFF"
+bblue="#89CFF0"
+orange="#F6890A"
+yellow="#CCFF00"
+cyan="#00FEFC"
+teal="#43BBB6"
+black="#000000"
+grey="#B0B6B6"
+echo "^b$black^^c$bblue^=^d^^b$bblue^^c$black^$(volume --get)^d^"
